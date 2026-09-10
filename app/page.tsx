@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import KemahasiswaanSection from "@/components/KemahasiswaanSection";
+import FastabiqulKhairat from "@/components/FastabiqulKhairat";
 import AikSection from "@/components/AikSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex-1 flex flex-col w-full">
         <HeroSection />
         <KemahasiswaanSection />
+        <FastabiqulKhairat />
         <AikSection />
         <CTASection />
       </main>

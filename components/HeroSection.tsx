@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full bg-[#F6FAF8] pt-20 pb-8 min-[380px]:pt-22 min-[380px]:pb-10 sm:pt-24 sm:pb-14 lg:py-0 lg:h-screen lg:min-h-[760px] lg:max-h-[950px] flex items-center overflow-hidden"
+      className="relative w-full bg-[#F6FAF8] pt-20 pb-8 sm:pt-24 sm:pb-12 lg:py-0 lg:h-screen lg:min-h-[760px] lg:max-h-[950px] flex items-center overflow-hidden"
     >
       {/* ========================================================================= */}
       {/* 1. DESKTOP ARTWORK LAYER (Screen width >= 1024px)                          */}
@@ -132,90 +132,83 @@ export default function HeroSection() {
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. MAIN CONTAINER (2-column side-by-side on Mobile, Tablet & Desktop)      */}
+      {/* 2. MAIN CONTAINER (Mobile & Tablet Stacked, 2-Column on Desktop)           */}
       {/* ========================================================================= */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-3 min-[360px]:px-4 min-[400px]:px-5 sm:px-8 lg:px-10 py-1 sm:py-4 lg:py-0">
-        <div className="grid grid-cols-12 items-center gap-1.5 min-[360px]:gap-2 min-[400px]:gap-3 sm:gap-5 lg:gap-8 w-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-1 sm:py-3 lg:py-0">
+        <div className="grid grid-cols-12 items-center gap-y-4 sm:gap-y-6 lg:gap-8 w-full">
           {/* ===================================================================== */}
-          {/* LEFT COLUMN: HERO TEXT & CTAs (50% on mobile, 50% on desktop)         */}
+          {/* TEXT & CTAs: Top on Mobile/Tablet, Left on Desktop (50%)              */}
           {/* ===================================================================== */}
-          <div className="col-span-6 min-[480px]:col-span-6 sm:col-span-6 lg:col-span-6 flex flex-col items-start text-left max-w-lg z-20">
-            {/* Eyebrow */}
+          <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left max-w-2xl lg:max-w-lg z-20">
+            {/* Eyebrow - Unified single element with tight leading */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="mb-1 min-[360px]:mb-1.5 sm:mb-3"
+              className="mb-2 sm:mb-3"
             >
-              <span className="text-[8px] min-[360px]:text-[9px] min-[400px]:text-[10px] sm:text-xs lg:text-sm font-bold tracking-[0.12em] sm:tracking-[0.18em] text-[#0F9F91] uppercase">
+              <span className="block font-heading font-bold text-[10px] min-[360px]:text-[11px] sm:text-xs lg:text-sm tracking-[0.16em] sm:tracking-[0.18em] text-[#0F9F91] uppercase leading-tight">
                 UNIVERSITAS SIBER MUHAMMADIYAH
               </span>
             </motion.div>
 
-            {/* Headline (Side-by-side responsive breaks: natural 4-lines on mobile, 2-lines on tablet/desktop) */}
+            {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="font-heading font-extrabold text-[18px] min-[360px]:text-[21px] min-[400px]:text-[25px] sm:text-[34px] md:text-[40px] lg:text-[48px] xl:text-[56px] leading-[1.12] sm:leading-[1.14] tracking-tight"
+              className="font-heading font-extrabold text-[28px] min-[360px]:text-[32px] min-[400px]:text-[36px] sm:text-[44px] md:text-[48px] lg:text-[48px] xl:text-[56px] leading-[1.14] sm:leading-[1.12] tracking-tight"
             >
-              <span className="block sm:inline text-[#0A192F]">
-                Kembangkan{" "}
+              <span className="block text-[#0A192F]">
+                Kembangkan Potensi,
               </span>
-              <span className="block sm:inline text-[#0A192F]">
-                Potensi,
-              </span>
-              <br className="hidden sm:block" />
-              <span className="block sm:inline text-[#14B8A6] mt-0.5 sm:mt-0">
-                Teguhkan{" "}
-              </span>
-              <span className="block sm:inline text-[#14B8A6]">
-                Karakter.
+              <span className="block text-[#14B8A6] mt-0.5 sm:mt-1">
+                Teguhkan Karakter.
               </span>
             </motion.h1>
 
-            {/* Description (Compact 3-4 lines on mobile) */}
+            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-slate-600 text-[9.5px] min-[360px]:text-[10.5px] min-[400px]:text-[11.5px] sm:text-sm lg:text-base leading-[1.36] sm:leading-relaxed mt-1.5 min-[360px]:mt-2 sm:mt-4 max-w-[190px] min-[360px]:max-w-[210px] min-[400px]:max-w-[240px] sm:max-w-xs lg:max-w-[460px] font-normal"
+              className="text-slate-600 text-[13px] min-[360px]:text-sm sm:text-base leading-relaxed mt-2 sm:mt-3.5 max-w-xl lg:max-w-[460px] font-normal"
             >
               Biro Kemahasiswaan dan AIK Universitas Siber Muhammadiyah hadir
               untuk mendampingi perjalanan prestasimu yang berlandaskan
               nilai-nilai Islam.
             </motion.p>
 
-            {/* CTA Buttons (Compact layout) */}
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-1.5 min-[360px]:gap-2 sm:gap-4 mt-2.5 min-[360px]:mt-3 sm:mt-6 w-full"
+              className="flex flex-row items-center gap-3 sm:gap-4 mt-3.5 sm:mt-5 lg:mt-6 w-full"
             >
               {/* Primary CTA */}
               <Link
                 href="#kemahasiswaan"
-                className="inline-flex items-center justify-center gap-1.5 h-8 min-[360px]:h-8.5 min-[400px]:h-9 sm:h-12 lg:h-[56px] px-2.5 min-[360px]:px-3 min-[400px]:px-3.5 sm:px-6 rounded-lg sm:rounded-2xl font-semibold text-[10px] min-[360px]:text-[11px] min-[400px]:text-xs sm:text-sm lg:text-base text-white bg-[#14B8A6] hover:bg-[#0F9F91] shadow-md shadow-[#14B8A6]/25 hover:shadow-lg hover:shadow-[#14B8A6]/35 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 h-10 min-[360px]:h-11 sm:h-12 lg:h-[56px] px-4 min-[360px]:px-5 sm:px-6 rounded-xl sm:rounded-2xl font-semibold text-xs sm:text-sm lg:text-base text-white bg-[#14B8A6] hover:bg-[#0F9F91] shadow-md shadow-[#14B8A6]/25 hover:shadow-lg hover:shadow-[#14B8A6]/35 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Jelajahi Sekarang</span>
-                <ArrowRight className="w-3 h-3 min-[360px]:w-3.5 min-[360px]:h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 stroke-[2]" />
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 stroke-[2]" />
               </Link>
 
               {/* Secondary CTA: Video Button */}
               <button
                 type="button"
                 onClick={() => setIsVideoOpen(true)}
-                className="inline-flex items-center gap-1.5 min-[360px]:gap-2 sm:gap-3 text-left group cursor-pointer focus:outline-none"
+                className="inline-flex items-center gap-2 sm:gap-3 text-left group cursor-pointer focus:outline-none"
               >
-                <div className="w-6 h-6 min-[360px]:w-7 min-[360px]:h-7 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white shadow-md shadow-slate-900/10 border border-slate-150 flex items-center justify-center text-[#0A192F] group-hover:scale-105 transition-all duration-200">
-                  <Play className="w-2.5 h-2.5 min-[360px]:w-3 min-[360px]:h-3 sm:w-4 sm:h-4 fill-[#0A192F] text-[#0A192F] ml-0.5" />
+                <div className="w-8 h-8 min-[360px]:w-9 min-[360px]:h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white shadow-md shadow-slate-900/10 border border-slate-150 flex items-center justify-center text-[#0A192F] group-hover:scale-105 transition-all duration-200">
+                  <Play className="w-3 h-3 min-[360px]:w-3.5 min-[360px]:h-3.5 sm:w-4 sm:h-4 fill-[#0A192F] text-[#0A192F] ml-0.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-heading font-bold text-[10px] min-[360px]:text-[11px] sm:text-sm text-[#0A192F] group-hover:text-[#14B8A6] transition-colors leading-tight">
+                  <span className="font-heading font-bold text-xs sm:text-sm text-[#0A192F] group-hover:text-[#14B8A6] transition-colors leading-tight">
                     Tonton Video
                   </span>
-                  <span className="text-[8px] min-[360px]:text-[9px] sm:text-xs text-slate-500 font-medium">
+                  <span className="text-[10px] sm:text-xs text-slate-500 font-medium">
                     Mengenal SiberMu
                   </span>
                 </div>
@@ -252,82 +245,79 @@ export default function HeroSection() {
           </div>
 
           {/* ===================================================================== */}
-          {/* RIGHT COLUMN: HERO VISUAL ON TABLET & MOBILE (< 1024px)               */}
-          {/* Side-by-side with text, retaining desktop visual identity              */}
+          {/* MOBILE/TABLET VISUAL HERO AREA (< 1024px)                             */}
+          {/* Prominent, right-anchored subject, large and commanding               */}
           {/* ===================================================================== */}
-          <div className="col-span-6 min-[480px]:col-span-6 sm:col-span-6 lg:hidden relative flex items-center justify-end z-10 w-full">
-            <div className="relative w-full h-[275px] min-[360px]:h-[295px] min-[400px]:h-[330px] sm:h-[420px] md:h-[460px] flex items-center justify-end">
-              {/* Navy Curved Wave Backdrop (Matches desktop feel, perfectly horizontal) */}
-              <div className="absolute right-0 top-0 bottom-0 w-[96%] sm:w-[92%] h-full bg-gradient-to-br from-[#0A192F] via-[#0D213F] to-[#07152B] rounded-l-[32px] min-[360px]:rounded-l-[40px] sm:rounded-l-[70px] overflow-hidden shadow-xl shadow-slate-900/10">
-                {/* Subtle turquoise radial glow */}
-                <div className="absolute -top-10 -right-10 w-28 h-28 sm:w-36 sm:h-36 bg-[#14B8A6]/25 blur-xl rounded-full pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 bg-[#0F9F91]/20 blur-lg rounded-full pointer-events-none" />
+          <div className="col-span-12 lg:hidden relative flex items-center justify-center z-10 w-full mt-2 sm:mt-4">
+            <div className="relative w-full max-w-[480px] h-[310px] min-[360px]:h-[340px] min-[400px]:h-[380px] sm:h-[440px] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#0A192F] via-[#0D213F] to-[#07152B] shadow-xl shadow-slate-900/12">
+              {/* Subtle turquoise glow & organic light wash */}
+              <div className="absolute -top-12 -right-12 w-44 h-44 bg-[#14B8A6]/25 blur-2xl rounded-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-36 h-36 bg-[#0F9F91]/20 blur-xl rounded-full pointer-events-none" />
 
-                {/* Subtle Geometric Mandala Watermark */}
-                <div className="absolute top-1 right-1 sm:top-2 sm:right-2 w-16 h-16 min-[360px]:w-20 min-[360px]:h-20 sm:w-32 sm:h-32 opacity-15 pointer-events-none">
-                  <svg viewBox="0 0 100 100" className="w-full h-full stroke-[#5EEAD4] fill-none" strokeWidth="0.8">
-                    <circle cx="50" cy="50" r="40" />
-                    <circle cx="50" cy="50" r="28" />
-                    <polygon points="50,15 85,50 50,85 15,50" />
-                    <polygon points="50,25 75,50 50,75 25,50" />
-                  </svg>
-                </div>
+              {/* Subtle Geometric Mandala Watermark */}
+              <div className="absolute top-2 right-2 w-28 h-28 sm:w-36 sm:h-36 opacity-15 pointer-events-none">
+                <svg viewBox="0 0 100 100" className="w-full h-full stroke-[#5EEAD4] fill-none" strokeWidth="0.8">
+                  <circle cx="50" cy="50" r="40" />
+                  <circle cx="50" cy="50" r="28" />
+                  <polygon points="50,15 85,50 50,85 15,50" />
+                  <polygon points="50,25 75,50 50,75 25,50" />
+                </svg>
               </div>
 
-              {/* Supporting Calligraphy (Top-right of navy wave) */}
+              {/* Supporting Calligraphy (Top-Left corner for balance against right-anchored subject) */}
               <div
-                className={`absolute top-2 sm:top-4 right-2 min-[360px]:right-2.5 sm:right-4 z-20 text-right leading-[1.15] select-none ${caveat.className}`}
+                className={`absolute top-3 sm:top-4 left-3.5 sm:left-5 z-20 text-left leading-[1.15] select-none ${caveat.className}`}
               >
-                <span className="block text-[9px] min-[360px]:text-[10.5px] min-[400px]:text-[11.5px] sm:text-sm text-white/95 font-bold tracking-wide -rotate-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
+                <span className="block text-xs min-[360px]:text-sm sm:text-base text-white/95 font-bold tracking-wide -rotate-2 drop-shadow">
                   Ilmu • Teknologi
                 </span>
-                <span className="block text-[9px] min-[360px]:text-[10.5px] min-[400px]:text-[11.5px] sm:text-sm text-white/95 font-bold tracking-wide -rotate-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
+                <span className="block text-xs min-[360px]:text-sm sm:text-base text-[#2DD4BF] font-bold tracking-wide -rotate-2 drop-shadow">
                   Akhlak Berkemajuan
                 </span>
               </div>
 
-              {/* Main Visual Cutout: hero-image.png with object-contain (NO CROPPING) */}
-              <div className="relative w-full h-[88%] min-[360px]:h-[90%] sm:h-[92%] z-10 flex items-end justify-center">
+              {/* Main Visual Cutout: Prominently Anchored to the RIGHT side */}
+              <div className="absolute right-[-10px] min-[360px]:right-[-12px] sm:right-0 bottom-0 w-[84%] min-[360px]:w-[80%] sm:w-[76%] h-[95%] z-10 flex items-end justify-end">
                 <Image
                   src="/images/hero/hero-image.png"
                   alt="Mahasiswi SiberMu dengan VR dan Laptop"
                   fill
                   priority
-                  className="object-contain object-bottom"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1023px) 48vw, 500px"
+                  className="object-contain object-right-bottom"
+                  sizes="(max-width: 640px) 85vw, 550px"
                 />
               </div>
 
-              {/* Compact Floating Card: "Mahasiswa Berkemajuan" (Floated at bottom-[16%] next to laptop) */}
-              <div className="absolute bottom-[16%] sm:bottom-[19%] left-[-4px] min-[360px]:left-[-6px] sm:left-[-10px] z-20 max-w-[125px] min-[360px]:max-w-[138px] min-[400px]:max-w-[155px] sm:max-w-[210px] pointer-events-auto">
-                <div className="bg-white/95 backdrop-blur-md rounded-lg sm:rounded-xl p-1 min-[360px]:p-1.5 sm:p-2.5 shadow-lg shadow-slate-900/15 border border-slate-100 flex items-center gap-1.5 sm:gap-2">
-                  <div className="flex-shrink-0 w-5 h-5 min-[360px]:w-6 min-[360px]:h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91]">
-                    <GraduationCap className="w-3 h-3 min-[360px]:w-3.5 min-[360px]:h-3.5 sm:w-4 sm:h-4 stroke-[1.8]" />
+              {/* Compact Floating Card: "Mahasiswa Berkemajuan" (Floated at Bottom-Left) */}
+              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20 max-w-[170px] min-[360px]:max-w-[190px] sm:max-w-[220px] pointer-events-auto">
+                <div className="bg-white/95 backdrop-blur-md rounded-xl p-2 sm:p-2.5 shadow-xl shadow-slate-950/20 border border-white/30 flex items-center gap-2">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#DDF7F3] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
+                    <GraduationCap className="w-4 h-4 stroke-[1.8]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-heading font-extrabold text-[8px] min-[360px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-xs text-[#0A192F] tracking-tight leading-tight truncate">
+                    <h4 className="font-heading font-extrabold text-[10px] sm:text-xs text-[#0A192F] tracking-tight leading-tight truncate">
                       Mahasiswa Berkemajuan
                     </h4>
-                    <p className="text-[6.5px] min-[360px]:text-[7.5px] min-[400px]:text-[8px] sm:text-[9.5px] text-slate-500 font-medium leading-tight truncate">
+                    <p className="text-[8.5px] sm:text-[9.5px] text-slate-500 font-medium leading-tight truncate">
                       Berilmu, Berakhlak
                     </p>
                   </div>
                   <Link
                     href="#kemahasiswaan"
                     aria-label="Pelajari Mahasiswa Berkemajuan"
-                    className="flex-shrink-0 w-4 h-4 min-[360px]:w-5 min-[360px]:h-5 sm:w-6 sm:h-6 rounded-full bg-slate-100 hover:bg-[#14B8A6] hover:text-white text-slate-600 flex items-center justify-center transition-colors"
+                    className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-slate-100 hover:bg-[#14B8A6] hover:text-white text-slate-600 flex items-center justify-center transition-colors"
                   >
                     <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                   </Link>
                 </div>
               </div>
 
-              {/* Compact Fastabiqul Khairat (Bottom-right inside navy curve, beneath the card) */}
-              <div className="absolute bottom-1.5 min-[360px]:bottom-2 right-2 min-[360px]:right-2.5 z-20 text-right select-none pointer-events-none">
-                <span className="block text-[7px] min-[360px]:text-[8px] min-[400px]:text-[9px] sm:text-[10px] tracking-[0.14em] font-bold text-[#2DD4BF] uppercase">
+              {/* Compact Fastabiqul Khairat Badge (Bottom-Right micro detail) */}
+              <div className="absolute bottom-2 right-3 z-20 text-right select-none pointer-events-none">
+                <span className="block text-[8px] min-[360px]:text-[9px] sm:text-[10px] tracking-[0.16em] font-bold text-[#2DD4BF] uppercase">
                   FASTABIQUL KHAIRAT
                 </span>
-                <span className="block text-[6px] min-[360px]:text-[7px] min-[400px]:text-[7.5px] sm:text-[8.5px] text-slate-300 italic leading-tight">
+                <span className="block text-[7px] min-[360px]:text-[8px] sm:text-[9px] text-slate-300 italic leading-tight">
                   “Berlomba dalam kebaikan”
                 </span>
               </div>

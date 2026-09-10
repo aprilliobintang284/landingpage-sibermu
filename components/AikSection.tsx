@@ -31,7 +31,7 @@ export default function AikSection() {
   return (
     <section
       id="aik"
-      className="scroll-mt-20 relative pt-12 sm:pt-14 md:pt-16 pb-20 sm:pb-24 md:pb-28 bg-[#F8FBFB] border-t border-slate-200/80 overflow-hidden"
+      className="scroll-mt-20 relative pt-8 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 bg-[#F8FBFB] overflow-hidden"
     >
       {/* Subtle Ambient Background Tint */}
       <div className="absolute inset-0 pointer-events-none">
@@ -169,20 +169,20 @@ export default function AikSection() {
                   transition={{ duration: 0.45, delay: index * 0.08 }}
                   className={`group ${
                     !isLast
-                      ? "py-4 sm:py-6 lg:py-7 border-b border-slate-200/75 hover:border-[#14B8A6]/30"
-                      : "pt-4 sm:pt-6 lg:pt-7"
+                      ? "py-3 sm:py-4 md:py-6 border-b border-slate-200/75 hover:border-[#14B8A6]/30"
+                      : "pt-3 sm:pt-4 md:pt-6"
                   } transition-colors duration-200`}
                 >
-                  <div className="flex items-start gap-3.5 sm:gap-5">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91] flex-shrink-0 group-hover:scale-105 group-hover:bg-[#14B8A6] group-hover:text-white transition-all duration-200 shadow-sm shadow-[#14B8A6]/10">
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.9]" />
+                  <div className="flex items-start gap-3 sm:gap-4 md:gap-5">
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg sm:rounded-xl bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91] flex-shrink-0 group-hover:scale-105 group-hover:bg-[#14B8A6] group-hover:text-white transition-all duration-200 shadow-sm shadow-[#14B8A6]/10">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 stroke-[1.9]" />
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="font-heading font-bold text-lg sm:text-xl md:text-2xl text-[#0A192F] tracking-tight mb-1 sm:mb-1.5 group-hover:text-[#0F9F91] transition-colors duration-200">
+                      <h3 className="font-heading font-extrabold text-base sm:text-lg md:text-2xl text-[#0A192F] tracking-tight mb-0.5 sm:mb-1 group-hover:text-[#0F9F91] transition-colors duration-200">
                         {item.title}
                       </h3>
-                      <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed">
+                      <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
