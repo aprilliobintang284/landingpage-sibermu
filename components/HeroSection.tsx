@@ -251,9 +251,9 @@ export default function HeroSection() {
           {/* Asymmetric composition matching screenshot reference                  */}
           {/* Uses transparent /hero/hero-mobile.png directly on light canvas       */}
           {/* ===================================================================== */}
-          <div className="col-span-12 lg:hidden relative w-full flex flex-col items-end -mt-10 min-[360px]:-mt-16 sm:-mt-10 z-10 select-none">
-            {/* Visual Wrapper: Aligned right, slightly bleeding right asymmetrically */}
-            <div className="relative w-[98%] min-[360px]:w-[95%] sm:w-[86%] max-w-[440px] mr-[-12px] min-[360px]:mr-[-16px] sm:mr-0">
+          <div className="col-span-12 lg:hidden relative w-full flex flex-col items-end -mt-[76px] min-[360px]:-mt-[102px] sm:-mt-[68px] z-10 select-none">
+            {/* Visual Wrapper: Aligned right, laptop shifted inward from left */}
+            <div className="relative w-[94%] min-[360px]:w-[91%] sm:w-[84%] max-w-[420px] mr-[-16px] min-[360px]:mr-[-22px] sm:mr-0">
               {/* Transparent PNG Hero Mobile Asset */}
               <Image
                 src="/hero/hero-mobile.png"
@@ -262,7 +262,7 @@ export default function HeroSection() {
                 height={1391}
                 priority
                 className="w-full h-auto object-contain pointer-events-none drop-shadow-sm"
-                sizes="(max-width: 640px) 95vw, 440px"
+                sizes="(max-width: 640px) 95vw, 420px"
               />
 
               {/* Supporting Calligraphy Script on top-right navy curve: "Ilmu • Teknologi • Akhlak • Berkemajuan" */}
@@ -283,13 +283,13 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Floating Card: "Mahasiswa Berkemajuan" (Anchored at base, overlapping teal curve) */}
+              {/* Floating Card: "Mahasiswa Berkemajuan" (Floating above base visual) */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="absolute bottom-2 left-2 right-4 min-[360px]:bottom-3 min-[360px]:left-3 min-[360px]:right-5 z-20 pointer-events-auto"
+                className="absolute bottom-7 left-3 right-5 min-[360px]:bottom-9 min-[360px]:left-4 min-[360px]:right-6 sm:bottom-10 z-20 pointer-events-auto"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 min-[360px]:p-3 sm:p-3.5 shadow-[0_12px_32px_-6px_rgba(10,25,47,0.16)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3">
                   <div className="flex-shrink-0 w-9 h-9 min-[360px]:w-10 min-[360px]:h-10 rounded-xl bg-[#E6F8F5] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
