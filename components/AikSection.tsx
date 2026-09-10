@@ -31,7 +31,7 @@ export default function AikSection() {
   return (
     <section
       id="aik"
-      className="scroll-mt-20 relative py-20 sm:py-24 md:py-28 bg-[#F8FBFB] border-t border-slate-200/80 overflow-hidden"
+      className="scroll-mt-20 relative pt-12 sm:pt-14 md:pt-16 pb-20 sm:pb-24 md:pb-28 bg-[#F8FBFB] border-t border-slate-200/80 overflow-hidden"
     >
       {/* Subtle Ambient Background Tint */}
       <div className="absolute inset-0 pointer-events-none">

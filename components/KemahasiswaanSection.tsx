@@ -16,7 +16,7 @@ export default function KemahasiswaanSection() {
   return (
     <section
       id="kemahasiswaan"
-      className="scroll-mt-20 relative py-20 sm:py-28 md:py-32 bg-[#F8FBFB] border-t border-slate-200/80 overflow-hidden"
+      className="scroll-mt-20 relative pt-20 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 bg-[#F8FBFB] border-t border-slate-200/80 overflow-hidden"
     >
       {/* Subtle Ambient Background Tint */}
       <div className="absolute inset-0 pointer-events-none">
