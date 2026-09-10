@@ -126,7 +126,6 @@ export default function Footer() {
               {[
                 { name: "Beranda", href: "#hero" },
                 { name: "Kemahasiswaan", href: "#kemahasiswaan" },
-                { name: "Fastabiqul Khairat", href: "#fastabiqul-khairat" },
                 { name: "AIK", href: "#aik" },
                 { name: "Layanan", href: "#cta" },
               ].map((item) => (
