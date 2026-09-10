@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Deep Navy Tokens */
+  --color-navy-950: #040914;
+  --color-navy-900: #070f1e;
+  --color-navy-850: #0b172b;
+  --color-navy-800: #101f38;
+  --color-navy-750: #142847;
+  --color-navy-700: #1a3258;
+  --color-navy-600: #254677;
+
+  /* Turquoise / Hijau Tosca Tokens (Primary: #14B8A6, Hover: #0F9F91) */
+  --color-turquoise-950: #042321;
+  --color-turquoise-900: #0a3e3a;
+  --color-turquoise-850: #0c4f4a;
+  --color-turquoise-800: #0d605a;
+  --color-turquoise-700: #0d7d74;
+  --color-turquoise-600: #0f9f91;
+  --color-turquoise-500: #14b8a6;
+  --color-turquoise-400: #2dd4bf;
+  --color-turquoise-300: #5eead4;
+  --color-turquoise-200: #99f6e4;
+  --color-turquoise-100: #ddf7f3;
+  --color-turquoise-50: #f0fbf9;
+
+  /* Backward Compatibility Aliases for Emerald to Turquoise */
+  --color-emerald-950: #042321;
+  --color-emerald-900: #0a3e3a;
+  --color-emerald-800: #0d605a;
+  --color-emerald-700: #0d7d74;
+  --color-emerald-600: #0f9f91;
+  --color-emerald-500: #14b8a6;
+  --color-emerald-400: #2dd4bf;
+  --color-emerald-300: #5eead4;
+  --color-emerald-200: #99f6e4;
+  --color-emerald-100: #ddf7f3;
+  --color-emerald-50: #f0fbf9;
+
+  /* Light Mint & Off-white Tokens */
+  --color-mint-50: #f0fbf9;
+  --color-mint-100: #ddf7f3;
+  --color-mint-200: #99f6e4;
+  --color-offwhite: #f8fafc;
+
+  /* Slate & Neutral Gray Tokens */
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070f1e;
+  --foreground: #f8fafc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets & overflow safety */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Design System Utility Classes */
+.glass-panel {
+  background: rgba(11, 23, 43, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(16, 31, 56, 0.85);
+  border-color: rgba(45, 212, 191, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(20, 184, 166, 0.15);
+}
+
+.glass-nav {
+  background: rgba(7, 15, 30, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Glow effects */
+.glow-turquoise,
+.glow-emerald {
+  box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.3);
+}
+
+.glow-subtle {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Gradient helpers */
+.text-gradient-turquoise,
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 50%, #0f9f91 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-heading {
+  background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 70%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-radial-hero {
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.15) 0%, rgba(11, 23, 43, 0.4) 45%, transparent 70%);
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
