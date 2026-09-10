@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section
       id="cta"
-      className="relative py-18 sm:py-20 md:py-24 lg:py-28 bg-[#040914] border-t border-white/10 overflow-hidden"
+      className="scroll-mt-20 relative py-18 sm:py-20 md:py-24 lg:py-28 bg-[#040914] border-t border-white/10 overflow-hidden"
     >
       {/* =================================================================== */}
       {/* 1. AMBIENT TURQUOISE & MINT GLOW                                    */}
