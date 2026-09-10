@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Sparkles,
   X,
+  ChevronRight,
 } from "lucide-react";
 
 const caveat = Caveat({
@@ -137,6 +138,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-1 sm:py-3 lg:py-0">
         <div className="grid grid-cols-12 items-center gap-y-4 sm:gap-y-6 lg:gap-8 w-full">
           {/* ===================================================================== */}
+          {/* ===================================================================== */}
           {/* TEXT & CTAs: Top on Mobile/Tablet, Left on Desktop (50%)              */}
           {/* ===================================================================== */}
           <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left max-w-2xl lg:max-w-lg z-20">
@@ -145,10 +147,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="mb-2 sm:mb-3"
+              className="mb-1.5 sm:mb-2.5"
             >
-              <span className="block font-heading font-bold text-[10px] min-[360px]:text-[11px] sm:text-xs lg:text-sm tracking-[0.16em] sm:tracking-[0.18em] text-[#0F9F91] uppercase leading-tight">
-                UNIVERSITAS SIBER MUHAMMADIYAH
+              <span className="block font-heading font-bold text-[11px] min-[360px]:text-[12px] sm:text-xs lg:text-sm tracking-[0.16em] sm:tracking-[0.18em] text-[#0F9F91] uppercase leading-tight">
+                UNIVERSITAS SIBER<br className="min-[480px]:hidden" /> MUHAMMADIYAH
               </span>
             </motion.div>
 
@@ -156,8 +158,8 @@ export default function HeroSection() {
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="font-heading font-extrabold text-[28px] min-[360px]:text-[32px] min-[400px]:text-[36px] sm:text-[44px] md:text-[48px] lg:text-[48px] xl:text-[56px] leading-[1.14] sm:leading-[1.12] tracking-tight"
+              transition={{ duration: 0.6, delay: 0.08, ease: "easeOut" }}
+              className="font-heading font-extrabold text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-[44px] md:text-[48px] lg:text-[48px] xl:text-[56px] leading-[1.12] tracking-tight"
             >
               <span className="block text-[#0A192F]">
                 Kembangkan Potensi,
@@ -169,10 +171,10 @@ export default function HeroSection() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-slate-600 text-[13px] min-[360px]:text-sm sm:text-base leading-relaxed mt-2 sm:mt-3.5 max-w-xl lg:max-w-[460px] font-normal"
+              transition={{ duration: 0.6, delay: 0.16, ease: "easeOut" }}
+              className="text-slate-600 text-[13.5px] min-[360px]:text-[14.5px] sm:text-base leading-relaxed mt-2 sm:mt-3 max-w-[340px] sm:max-w-md lg:max-w-[460px] font-normal"
             >
               Biro Kemahasiswaan dan AIK Universitas Siber Muhammadiyah hadir
               untuk mendampingi perjalanan prestasimu yang berlandaskan
@@ -181,15 +183,15 @@ export default function HeroSection() {
 
             {/* CTA Buttons - Matching reference mockup */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-col items-start gap-3 mt-4 sm:mt-5 lg:mt-6 w-full sm:flex-row sm:items-center sm:gap-4"
+              transition={{ duration: 0.6, delay: 0.24, ease: "easeOut" }}
+              className="flex flex-col items-start gap-2.5 min-[360px]:gap-3 mt-3.5 sm:mt-5 lg:mt-6 sm:flex-row sm:items-center sm:gap-4 relative z-30"
             >
               {/* Primary CTA (Rounded-full pill button) */}
               <Link
                 href="#kemahasiswaan"
-                className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 lg:h-[56px] px-6 sm:px-7 rounded-full font-semibold text-xs sm:text-sm lg:text-base text-white bg-[#14B8A6] hover:bg-[#0F9F91] shadow-md shadow-[#14B8A6]/25 hover:shadow-lg hover:shadow-[#14B8A6]/35 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 lg:h-[56px] px-6 sm:px-7 rounded-full font-semibold text-xs sm:text-sm lg:text-base text-white bg-[#0F9F91] hover:bg-[#0D8A7D] shadow-md shadow-[#0F9F91]/25 hover:shadow-lg hover:shadow-[#0F9F91]/35 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Jelajahi Sekarang</span>
                 <ArrowRight className="w-4 h-4 stroke-[2]" />
@@ -201,7 +203,7 @@ export default function HeroSection() {
                 onClick={() => setIsVideoOpen(true)}
                 className="inline-flex items-center gap-2.5 sm:gap-3 text-left group cursor-pointer focus:outline-none"
               >
-                <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white shadow-md shadow-slate-900/10 border border-slate-150 flex items-center justify-center text-[#0A192F] group-hover:scale-105 transition-all duration-200">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white shadow-md shadow-slate-900/10 border border-slate-200/80 flex items-center justify-center text-[#0A192F] group-hover:scale-105 transition-all duration-200">
                   <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#0A192F] text-[#0A192F] ml-0.5" />
                 </div>
                 <div className="flex flex-col">
@@ -246,73 +248,66 @@ export default function HeroSection() {
 
           {/* ===================================================================== */}
           {/* MOBILE/TABLET VISUAL HERO AREA (< 1024px)                             */}
-          {/* Large dominant subject with organic wave & floating badge             */}
+          {/* Asymmetric composition matching screenshot reference                  */}
+          {/* Uses transparent /hero/hero-mobile.png directly on light canvas       */}
           {/* ===================================================================== */}
-          <div className="col-span-12 lg:hidden relative flex items-center justify-center z-10 w-full mt-3 sm:mt-5">
-            <div className="relative w-full max-w-[480px] h-[340px] min-[360px]:h-[380px] min-[400px]:h-[420px] sm:h-[460px] rounded-3xl overflow-hidden bg-gradient-to-br from-[#0A192F] via-[#0D213F] to-[#07152B] shadow-xl shadow-slate-900/12">
-              {/* Subtle turquoise glow & organic light wash */}
-              <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#14B8A6]/25 blur-2xl rounded-full pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#0F9F91]/20 blur-xl rounded-full pointer-events-none" />
+          <div className="col-span-12 lg:hidden relative w-full flex flex-col items-end -mt-10 min-[360px]:-mt-16 sm:-mt-10 z-10 select-none">
+            {/* Visual Wrapper: Aligned right, slightly bleeding right asymmetrically */}
+            <div className="relative w-[98%] min-[360px]:w-[95%] sm:w-[86%] max-w-[440px] mr-[-12px] min-[360px]:mr-[-16px] sm:mr-0">
+              {/* Transparent PNG Hero Mobile Asset */}
+              <Image
+                src="/hero/hero-mobile.png"
+                alt="Mahasiswi Universitas Siber Muhammadiyah dengan VR Headset dan Laptop"
+                width={1131}
+                height={1391}
+                priority
+                className="w-full h-auto object-contain pointer-events-none drop-shadow-sm"
+                sizes="(max-width: 640px) 95vw, 440px"
+              />
 
-              {/* Subtle Geometric Mandala Watermark */}
-              <div className="absolute top-2 right-2 w-28 h-28 sm:w-36 sm:h-36 opacity-15 pointer-events-none">
-                <svg viewBox="0 0 100 100" className="w-full h-full stroke-[#5EEAD4] fill-none" strokeWidth="0.8">
-                  <circle cx="50" cy="50" r="40" />
-                  <circle cx="50" cy="50" r="28" />
-                  <polygon points="50,15 85,50 50,85 15,50" />
-                  <polygon points="50,25 75,50 50,75 25,50" />
-                </svg>
-              </div>
-
-              {/* Supporting Calligraphy: Top-Right */}
+              {/* Supporting Calligraphy Script on top-right navy curve: "Ilmu • Teknologi • Akhlak • Berkemajuan" */}
               <div
-                className={`absolute top-3.5 right-4 z-20 text-right leading-[1.2] select-none ${caveat.className}`}
+                className={`absolute top-[17%] right-[7%] min-[360px]:right-[9%] text-right leading-[1.18] pointer-events-none select-none ${caveat.className}`}
               >
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-white/95 font-bold tracking-wide -rotate-3 drop-shadow">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg text-white/95 font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Ilmu
                 </span>
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-white/95 font-bold tracking-wide -rotate-3 drop-shadow">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg text-white/95 font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Teknologi
                 </span>
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-[#2DD4BF] font-bold tracking-wide -rotate-3 drop-shadow">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg text-[#2DD4BF] font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Akhlak
                 </span>
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-[#2DD4BF] font-bold tracking-wide -rotate-3 drop-shadow">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg text-[#2DD4BF] font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Berkemajuan
                 </span>
               </div>
 
-              {/* Main Visual Cutout: Prominently Anchored to the RIGHT side */}
-              <div className="absolute right-[-10px] min-[360px]:right-[-12px] sm:right-0 bottom-0 w-[86%] min-[360px]:w-[82%] sm:w-[78%] h-[95%] z-10 flex items-end justify-end">
-                <Image
-                  src="/images/hero/hero-image.png"
-                  alt="Mahasiswi SiberMu dengan VR dan Laptop"
-                  fill
-                  priority
-                  className="object-contain object-right-bottom"
-                  sizes="(max-width: 640px) 85vw, 550px"
-                />
-              </div>
-
-              {/* Floating Card: "Mahasiswa Berkemajuan" (Matching reference mockup) */}
-              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20 max-w-[210px] min-[360px]:max-w-[240px] sm:max-w-[260px] pointer-events-auto">
-                <div className="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3 shadow-xl shadow-slate-950/20 border border-white/40 flex items-center gap-2.5 sm:gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#DDF7F3] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
-                    <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.8]" />
+              {/* Floating Card: "Mahasiswa Berkemajuan" (Anchored at base, overlapping teal curve) */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="absolute bottom-2 left-2 right-4 min-[360px]:bottom-3 min-[360px]:left-3 min-[360px]:right-5 z-20 pointer-events-auto"
+              >
+                <div className="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 min-[360px]:p-3 sm:p-3.5 shadow-[0_12px_32px_-6px_rgba(10,25,47,0.16)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3">
+                  <div className="flex-shrink-0 w-9 h-9 min-[360px]:w-10 min-[360px]:h-10 rounded-xl bg-[#E6F8F5] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
+                    <GraduationCap className="w-5 h-5 stroke-[1.8]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-heading font-extrabold text-[11px] sm:text-xs text-[#0A192F] tracking-tight leading-tight truncate">
+                    <h4 className="font-heading font-extrabold text-xs min-[360px]:text-[13.5px] text-[#0A192F] tracking-tight leading-tight truncate">
                       Mahasiswa Berkemajuan
                     </h4>
-                    <p className="text-[9px] sm:text-[10px] text-slate-500 font-medium leading-tight truncate mt-0.5">
+                    <p className="text-[9.5px] min-[360px]:text-[10.5px] text-slate-500 font-medium leading-tight truncate mt-0.5">
                       Berilmu, Berakhlak, Berdampak untuk Umat.
                     </p>
                   </div>
-                  <div className="flex-shrink-0 text-slate-400">
-                    <ArrowRight className="w-3.5 h-3.5" />
+                  <div className="flex-shrink-0 text-slate-400 pr-0.5">
+                    <ChevronRight className="w-4 h-4 stroke-[2]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
