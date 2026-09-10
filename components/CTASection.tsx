@@ -95,14 +95,23 @@ export default function CTASection() {
       {/* =================================================================== */}
       {/* 3. EDITORIAL CONTENT (Left / Left-Center Balanced)                  */}
       {/* =================================================================== */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 relative z-10">
         <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start text-left">
+          {/* Subtle teal accent pill indicator */}
+          <motion.div
+            initial={{ opacity: 0, width: 0 }}
+            whileInView={{ opacity: 1, width: 36 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="h-1 bg-[#14B8A6] rounded-full mb-3.5 sm:mb-5"
+          />
+
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="font-heading font-extrabold text-[26px] min-[360px]:text-[30px] sm:text-4xl md:text-5xl lg:text-[50px] text-[#0A192F] tracking-tight leading-[1.15] mb-4 sm:mb-6"
+            className="font-heading font-extrabold text-[26px] min-[360px]:text-[30px] sm:text-4xl md:text-5xl lg:text-[50px] text-[#0A192F] tracking-tight leading-[1.15] mb-3 sm:mb-5"
           >
             Siap Memulai Perjalananmu{" "}
             <span className="text-[#14B8A6]">Bersama SiberMu?</span>
@@ -113,7 +122,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mb-6 sm:mb-9"
+            className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mb-6 sm:mb-8"
           >
             Kembangkan potensimu dalam berbagai bidang dan teguhkan karaktermu
             melalui nilai-nilai AI-Islam dan Kemuhammadiyahan.
@@ -124,11 +133,11 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto"
           >
             <Link
               href="#kemahasiswaan"
-              className="inline-flex items-center justify-center gap-2.5 h-12 sm:h-[52px] px-7 sm:px-8 rounded-xl sm:rounded-[14px] bg-[#14B8A6] text-white font-heading font-bold text-sm sm:text-base tracking-wide shadow-md shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2.5 h-12 sm:h-[52px] px-8 rounded-full bg-[#14B8A6] text-white font-heading font-bold text-sm sm:text-base tracking-wide shadow-md shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 w-full sm:w-auto"
             >
               <span>Mulai Eksplorasi</span>
               <ArrowRight className="w-4 h-4 stroke-[2.2]" />
@@ -138,7 +147,7 @@ export default function CTASection() {
               href="https://sibermu.ac.id"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-12 sm:h-[52px] px-6 sm:px-7 rounded-xl sm:rounded-[14px] border border-slate-300/90 bg-white/70 hover:bg-white text-[#0A192F] font-heading font-semibold text-sm sm:text-base hover:border-[#14B8A6] hover:text-[#14B8A6] shadow-sm transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 h-12 sm:h-[52px] px-7 rounded-full border border-[#14B8A6] bg-white hover:bg-[#14B8A6]/5 text-[#0F9F91] font-heading font-semibold text-sm sm:text-base transition-all duration-200 w-full sm:w-auto"
             >
               <span>Hubungi Kami</span>
             </Link>

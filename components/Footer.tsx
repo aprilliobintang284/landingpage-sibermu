@@ -94,6 +94,25 @@ export default function Footer() {
                 </svg>
               </a>
 
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@universitassibermuhammadiyah"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok SiberMu"
+                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 text-slate-400 hover:text-[#14B8A6] hover:border-[#14B8A6]/40 hover:bg-[#14B8A6]/[0.08] flex items-center justify-center transition-all duration-200"
+              >
+                <svg
+                  className="w-4 h-4 fill-none stroke-current"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
+              </a>
+
               {/* Facebook */}
               <a
                 href="https://www.facebook.com/universitassibermuhammadiyah"
@@ -116,98 +135,99 @@ export default function Footer() {
           </div>
 
           {/* ------------------------------------------------------------- */}
-          {/* KOLOM 2: TAUTAN CEPAT                                         */}
+          {/* 2-COLUMN LINKS GRID (Side-by-side on Mobile, Grid on Desktop) */}
           {/* ------------------------------------------------------------- */}
-          <div className="lg:col-span-2">
-            <h3 className="font-heading font-bold text-xs uppercase tracking-[0.16em] text-white mb-4 sm:mb-5">
-              Tautan Cepat
-            </h3>
-            <ul className="space-y-3">
-              {[
-                { name: "Beranda", href: "#hero" },
-                { name: "Kemahasiswaan", href: "#kemahasiswaan" },
-                { name: "AIK", href: "#aik" },
-                { name: "Layanan", href: "#cta" },
-              ].map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 block py-0.5"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* ------------------------------------------------------------- */}
-          {/* KOLOM 3: LAYANAN                                              */}
-          {/* ------------------------------------------------------------- */}
-          <div className="lg:col-span-3">
-            <h3 className="font-heading font-bold text-xs uppercase tracking-[0.16em] text-white mb-4 sm:mb-5">
-              Layanan
-            </h3>
-            <ul className="space-y-3">
-              {[
-                {
-                  name: "Sistem Informasi Akademik",
-                  href: "https://sibermu.ac.id",
-                  external: true,
-                },
-                {
-                  name: "Pendaftaran Beasiswa",
-                  href: "#kemahasiswaan",
-                  external: false,
-                },
-                {
-                  name: "Layanan Konseling",
-                  href: "#cta",
-                  external: false,
-                },
-                {
-                  name: "Layanan Mahasiswa",
-                  href: "#kemahasiswaan",
-                  external: false,
-                },
-              ].map((item) => (
-                <li key={item.name}>
-                  {item.external ? (
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-1.5 text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 py-0.5"
-                    >
-                      <span>{item.name}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
-                    </a>
-                  ) : (
+          <div className="grid grid-cols-2 gap-5 sm:gap-8 md:contents">
+            {/* KOLOM 2: TAUTAN CEPAT */}
+            <div className="lg:col-span-2">
+              <h3 className="font-heading font-bold text-xs uppercase tracking-[0.16em] text-white mb-3.5 sm:mb-5">
+                Tautan Cepat
+              </h3>
+              <ul className="space-y-2.5 sm:space-y-3">
+                {[
+                  { name: "Beranda", href: "#hero" },
+                  { name: "Kemahasiswaan", href: "#kemahasiswaan" },
+                  { name: "AIK", href: "#aik" },
+                  { name: "Layanan", href: "#cta" },
+                ].map((item) => (
+                  <li key={item.name}>
                     <Link
                       href={item.href}
                       className="text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 block py-0.5"
                     >
                       {item.name}
                     </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* KOLOM 3: LAYANAN */}
+            <div className="lg:col-span-3">
+              <h3 className="font-heading font-bold text-xs uppercase tracking-[0.16em] text-white mb-3.5 sm:mb-5">
+                Layanan
+              </h3>
+              <ul className="space-y-2.5 sm:space-y-3">
+                {[
+                  {
+                    name: "Sistem Informasi Akademik",
+                    href: "https://sibermu.ac.id",
+                    external: true,
+                  },
+                  {
+                    name: "Pendaftaran Beasiswa",
+                    href: "#kemahasiswaan",
+                    external: false,
+                  },
+                  {
+                    name: "Layanan Konseling",
+                    href: "#cta",
+                    external: false,
+                  },
+                  {
+                    name: "Layanan Mahasiswa",
+                    href: "#kemahasiswaan",
+                    external: false,
+                  },
+                ].map((item) => (
+                  <li key={item.name}>
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1 text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 py-0.5"
+                      >
+                        <span>{item.name}</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 block py-0.5"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* ------------------------------------------------------------- */}
           {/* KOLOM 4: HUBUNGI KAMI                                         */}
           {/* ------------------------------------------------------------- */}
           <div className="lg:col-span-3">
-            <h3 className="font-heading font-bold text-xs uppercase tracking-[0.16em] text-white mb-4 sm:mb-5">
+            <h3 className="font-heading font-bold text-xs uppercase tracking-[0.16em] text-white mb-3.5 sm:mb-5">
               Hubungi Kami
             </h3>
 
-            <div className="space-y-4 text-sm">
+            <div className="space-y-3.5 sm:space-y-4 text-sm">
               {/* Alamat Kampus */}
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#14B8A6] flex-shrink-0 mt-1" />
-                <div className="text-slate-400 leading-relaxed">
+                <div className="text-slate-400 leading-relaxed text-xs sm:text-sm">
                   <span className="text-slate-200 block font-medium">
                     Universitas Siber Muhammadiyah
                   </span>
@@ -220,7 +240,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#14B8A6] flex-shrink-0" />
                 <a
                   href="mailto:kemahasiswaan@sibermu.ac.id"
-                  className="text-slate-400 hover:text-[#14B8A6] transition-colors duration-200"
+                  className="text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 text-xs sm:text-sm"
                 >
                   kemahasiswaan@sibermu.ac.id
                 </a>
@@ -229,7 +249,7 @@ export default function Footer() {
               {/* Layanan Terpadu */}
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#14B8A6] flex-shrink-0" />
-                <span className="text-slate-400">
+                <span className="text-slate-400 text-xs sm:text-sm">
                   Layanan Terpadu Mahasiswa
                 </span>
               </div>
@@ -240,15 +260,15 @@ export default function Footer() {
         {/* ================================================================= */}
         {/* FOOTER BOTTOM: DIVIDER & COPYRIGHT                                */}
         {/* ================================================================= */}
-        <div className="border-t border-white/[0.08] mt-10 sm:mt-14 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p className="text-center sm:text-left">
-            © 2026 SiberMu — Universitas Siber Muhammadiyah. Seluruh hak cipta dilindungi.
+        <div className="border-t border-white/[0.08] mt-8 sm:mt-14 pt-6 flex flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-slate-500">
+          <p className="text-left leading-relaxed">
+            © 2026 SiberMu — Universitas Siber Muhammadiyah. <span className="hidden min-[480px]:inline">Seluruh hak cipta dilindungi.</span>
           </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex-shrink-0">
             <Link
               href="#hero"
-              className="hover:text-[#14B8A6] transition-colors duration-200"
+              className="hover:text-[#14B8A6] transition-colors duration-200 whitespace-nowrap"
             >
               Kembali ke Atas ↑
             </Link>

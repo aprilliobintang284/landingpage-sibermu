@@ -38,8 +38,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#070f1e]/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 py-3"
-          : "bg-white/40 backdrop-blur-md border-b border-black/[0.04] py-4 sm:py-5"
+          ? "bg-[#070f1e]/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 py-2.5 sm:py-3"
+          : "bg-white/80 backdrop-blur-md border-b border-slate-200/50 py-2.5 sm:py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,10 +47,10 @@ export default function Navbar() {
           {/* Logo & Official Brand Identity */}
           <Link
             href="#hero"
-            className="group flex items-center gap-3 focus:outline-none rounded-xl"
+            className="group flex items-center gap-2.5 sm:gap-3 focus:outline-none rounded-xl"
           >
             {/* Official SiberMu Emblem Logo */}
-            <div className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-200">
+            <div className="relative flex items-center justify-center w-8 h-8 min-[360px]:w-9 min-[360px]:h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-200">
               <Image
                 src="/icons/sibermu-logo.png"
                 alt="Logo Resmi Universitas Siber Muhammadiyah"
@@ -64,14 +64,14 @@ export default function Navbar() {
             {/* Brand Typography */}
             <div className="flex flex-col">
               <span
-                className={`font-heading font-extrabold text-lg sm:text-[19px] tracking-tight transition-colors duration-300 ${
+                className={`font-heading font-extrabold text-[17px] sm:text-[19px] tracking-tight transition-colors duration-300 ${
                   isScrolled ? "text-white" : "text-[#0A192F]"
                 }`}
               >
                 SiberMu
               </span>
               <span
-                className={`text-[11px] sm:text-xs font-medium transition-colors duration-300 ${
+                className={`text-[10.5px] sm:text-xs font-medium transition-colors duration-300 ${
                   isScrolled ? "text-slate-400" : "text-slate-600"
                 }`}
               >
@@ -119,17 +119,17 @@ export default function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className={`p-2 rounded-xl transition-all duration-200 focus:outline-none ${
+              className={`p-1.5 sm:p-2 rounded-xl transition-all duration-200 focus:outline-none ${
                 isScrolled
-                  ? "text-slate-200 hover:text-white bg-navy-850/80 border border-white/10"
-                  : "text-[#0A192F] hover:text-[#14B8A6] bg-white/80 border border-slate-200/90 shadow-sm"
+                  ? "text-slate-200 hover:text-white"
+                  : "text-[#0A192F] hover:text-[#14B8A6]"
               }`}
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-5 h-5 sm:w-6 sm:h-6" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Menu className="w-6 h-6 stroke-[2.2]" />
               )}
             </button>
           </div>
