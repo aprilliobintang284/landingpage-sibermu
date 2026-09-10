@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full bg-[#F6FAF8] min-h-[520px] sm:min-h-[580px] lg:h-screen lg:min-h-[760px] lg:max-h-[950px] flex items-center overflow-hidden pt-20 sm:pt-24 lg:py-0"
+      className="relative w-full bg-[#F6FAF8] pt-24 pb-12 sm:pt-28 sm:pb-16 lg:py-0 lg:h-screen lg:min-h-[760px] lg:max-h-[950px] flex items-center overflow-hidden"
     >
       {/* ========================================================================= */}
       {/* 1. DESKTOP ARTWORK LAYER (Screen width >= 1024px)                          */}
@@ -132,45 +132,39 @@ export default function HeroSection() {
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. MAIN SIDE-BY-SIDE CONTAINER (Applies on Desktop, Tablet, AND Mobile)   */}
+      {/* 2. MAIN CONTAINER (Single-column stacked on Mobile/Tablet, 2-col on Desktop) */}
       {/* ========================================================================= */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4 sm:py-6 lg:py-0">
-        <div className="grid grid-cols-12 items-center gap-2 sm:gap-4 lg:gap-8 w-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-2 sm:py-4 lg:py-0">
+        <div className="grid grid-cols-12 items-center gap-y-6 sm:gap-y-8 lg:gap-8 w-full">
           {/* ===================================================================== */}
-          {/* LEFT COLUMN: HERO TEXT & CTAs (46–48% on mobile, 50% on desktop)     */}
+          {/* TEXT & CTAs COLUMN (Full-width on mobile/tablet, 50% on desktop)     */}
           {/* ===================================================================== */}
-          <div className="col-span-6 min-[480px]:col-span-6 sm:col-span-6 lg:col-span-6 flex flex-col items-start text-left max-w-lg z-20">
+          <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left max-w-xl lg:max-w-lg z-20">
             {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="mb-1.5 sm:mb-3"
+              className="mb-2 sm:mb-3"
             >
-              <span className="text-[8.5px] min-[380px]:text-[9.5px] sm:text-xs lg:text-sm font-bold tracking-[0.14em] sm:tracking-[0.18em] text-[#0F9F91] uppercase">
+              <span className="text-[11px] sm:text-xs lg:text-sm font-bold tracking-[0.16em] sm:tracking-[0.18em] text-[#0F9F91] uppercase">
                 UNIVERSITAS SIBER MUHAMMADIYAH
               </span>
             </motion.div>
 
-            {/* Headline (Side-by-side compatible, compact on mobile, majestic on desktop) */}
+            {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="font-heading font-extrabold text-[19px] min-[360px]:text-[21px] min-[400px]:text-[24px] sm:text-[34px] md:text-[42px] lg:text-[48px] xl:text-[56px] leading-[1.12] tracking-tight"
+              className="font-heading font-extrabold text-[30px] min-[380px]:text-[34px] sm:text-[42px] md:text-[46px] lg:text-[48px] xl:text-[56px] leading-[1.12] tracking-tight"
             >
-              <span className="block sm:inline text-[#0A192F]">
-                Kembangkan{" "}
+              <span className="text-[#0A192F]">
+                Kembangkan Potensi,
               </span>
-              <span className="block sm:inline text-[#0A192F]">
-                Potensi,
-              </span>
-              <br className="hidden sm:block" />
-              <span className="block sm:inline text-[#14B8A6] mt-0.5 sm:mt-0">
-                {" "}Teguhkan{" "}
-              </span>
-              <span className="block sm:inline text-[#14B8A6]">
-                Karakter.
+              <br />
+              <span className="text-[#14B8A6]">
+                Teguhkan Karakter.
               </span>
             </motion.h1>
 
@@ -179,7 +173,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-slate-600 text-[10px] min-[360px]:text-[11px] min-[400px]:text-[12px] sm:text-sm lg:text-base leading-snug sm:leading-relaxed mt-2 sm:mt-4 max-w-[210px] min-[400px]:max-w-[240px] sm:max-w-xs lg:max-w-[460px] font-normal"
+              className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3 sm:mt-4 max-w-lg lg:max-w-[460px] font-normal"
             >
               Biro Kemahasiswaan dan AIK Universitas Siber Muhammadiyah hadir
               untuk mendampingi perjalanan prestasimu yang berlandaskan
@@ -191,38 +185,38 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-2 sm:gap-4 mt-3 sm:mt-6 w-full"
+              className="flex flex-row items-center gap-3 sm:gap-4 mt-5 sm:mt-6 w-full"
             >
               {/* Primary CTA */}
               <Link
                 href="#kemahasiswaan"
-                className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 h-[38px] min-[380px]:h-[42px] sm:h-[50px] lg:h-[56px] px-3.5 min-[380px]:px-4.5 sm:px-6 rounded-xl sm:rounded-2xl font-semibold text-[11px] min-[380px]:text-xs sm:text-sm lg:text-base text-white bg-[#14B8A6] hover:bg-[#0F9F91] shadow-md shadow-[#14B8A6]/25 hover:shadow-lg hover:shadow-[#14B8A6]/35 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 lg:h-[56px] px-5 sm:px-6 rounded-xl sm:rounded-2xl font-semibold text-xs sm:text-sm lg:text-base text-white bg-[#14B8A6] hover:bg-[#0F9F91] shadow-md shadow-[#14B8A6]/25 hover:shadow-lg hover:shadow-[#14B8A6]/35 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Jelajahi Sekarang</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-5 lg:h-5 stroke-[2]" />
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 stroke-[2]" />
               </Link>
 
               {/* Secondary CTA: Video Button */}
               <button
                 type="button"
                 onClick={() => setIsVideoOpen(true)}
-                className="inline-flex items-center gap-2 sm:gap-3 text-left group cursor-pointer focus:outline-none"
+                className="inline-flex items-center gap-2.5 sm:gap-3 text-left group cursor-pointer focus:outline-none"
               >
-                <div className="w-8 h-8 min-[380px]:w-9 min-[380px]:h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white shadow-md shadow-slate-900/10 border border-slate-150 flex items-center justify-center text-[#0A192F] group-hover:scale-105 transition-all duration-200">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white shadow-md shadow-slate-900/10 border border-slate-150 flex items-center justify-center text-[#0A192F] group-hover:scale-105 transition-all duration-200">
                   <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#0A192F] text-[#0A192F] ml-0.5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-heading font-bold text-[10.5px] min-[380px]:text-xs sm:text-sm text-[#0A192F] group-hover:text-[#14B8A6] transition-colors leading-tight">
+                  <span className="font-heading font-bold text-xs sm:text-sm text-[#0A192F] group-hover:text-[#14B8A6] transition-colors leading-tight">
                     Tonton Video
                   </span>
-                  <span className="text-[9px] sm:text-xs text-slate-500 font-medium hidden min-[440px]:block">
+                  <span className="text-[10px] sm:text-xs text-slate-500 font-medium">
                     Mengenal SiberMu
                   </span>
                 </div>
               </button>
             </motion.div>
 
-            {/* Desktop Scroll Indicator */}
+            {/* Desktop Scroll Indicator (Hidden on mobile) */}
             <motion.button
               type="button"
               onClick={scrollToNextSection}
@@ -252,19 +246,19 @@ export default function HeroSection() {
           </div>
 
           {/* ===================================================================== */}
-          {/* RIGHT COLUMN ON TABLET & MOBILE (< 1024px)                             */}
-          {/* Side-by-side layout: uses hero-image.png cutout with curved navy wave */}
+          {/* VISUAL HERO COLUMN ON TABLET & MOBILE (< 1024px)                       */}
+          {/* Natural single-column layout positioned below text                    */}
           {/* ===================================================================== */}
-          <div className="col-span-6 min-[480px]:col-span-6 sm:col-span-6 lg:hidden relative flex items-center justify-end z-10">
-            <div className="relative w-full h-[280px] min-[400px]:h-[320px] sm:h-[400px] md:h-[460px] flex items-center justify-end">
-              {/* Navy Curved Wave Backdrop (Matches desktop feel, perfectly horizontal) */}
-              <div className="absolute right-0 top-0 bottom-0 w-[94%] sm:w-[90%] h-full bg-gradient-to-br from-[#0A192F] via-[#0D213F] to-[#07152B] rounded-l-[40px] sm:rounded-l-[70px] overflow-hidden shadow-xl shadow-slate-900/10">
+          <div className="col-span-12 lg:hidden relative flex items-center justify-center z-10 mt-4 sm:mt-6 w-full">
+            <div className="relative w-full max-w-[440px] h-[250px] min-[380px]:h-[280px] sm:h-[340px] flex items-center justify-center">
+              {/* Navy Backdrop Card */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#0D213F] to-[#07152B] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl shadow-slate-900/10">
                 {/* Subtle turquoise radial glow */}
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#14B8A6]/20 blur-xl rounded-full pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-28 h-28 bg-[#0F9F91]/15 blur-lg rounded-full pointer-events-none" />
 
                 {/* Subtle Geometric Mandala Watermark */}
-                <div className="absolute top-2 right-2 w-20 h-20 sm:w-32 sm:h-32 opacity-15 pointer-events-none">
+                <div className="absolute top-2 right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-15 pointer-events-none">
                   <svg viewBox="0 0 100 100" className="w-full h-full stroke-[#5EEAD4] fill-none" strokeWidth="0.8">
                     <circle cx="50" cy="50" r="40" />
                     <circle cx="50" cy="50" r="28" />
@@ -274,79 +268,65 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Supporting Calligraphy (Top-right of navy wave) */}
+              {/* Supporting Calligraphy (Top-right of navy card) */}
               <div
-                className={`absolute top-2 sm:top-4 right-2 sm:right-4 z-20 text-right leading-[1.15] select-none ${caveat.className}`}
+                className={`absolute top-2.5 sm:top-4 right-3 sm:right-4 z-20 text-right leading-[1.15] select-none ${caveat.className}`}
               >
-                <span className="block text-[10px] min-[400px]:text-[11px] sm:text-sm text-white/95 font-bold tracking-wide -rotate-3 drop-shadow">
+                <span className="block text-[11px] sm:text-sm text-white/95 font-bold tracking-wide -rotate-3 drop-shadow">
                   Ilmu • Teknologi
                 </span>
-                <span className="block text-[10px] min-[400px]:text-[11px] sm:text-sm text-white/95 font-bold tracking-wide -rotate-3 drop-shadow">
+                <span className="block text-[11px] sm:text-sm text-white/95 font-bold tracking-wide -rotate-3 drop-shadow">
                   Akhlak Berkemajuan
                 </span>
               </div>
 
-              {/* Main Visual Cutout: hero-image.png with object-contain (NO CROPPING) */}
-              <div className="relative w-full h-[88%] sm:h-[92%] z-10 flex items-end justify-center">
+              {/* Main Visual Cutout: hero-image.png */}
+              <div className="relative w-full h-[90%] sm:h-[92%] z-10 flex items-end justify-center">
                 <Image
                   src="/images/hero/hero-image.png"
                   alt="Mahasiswi SiberMu dengan VR dan Laptop"
                   fill
                   priority
                   className="object-contain object-bottom"
-                  sizes="(max-width: 1023px) 55vw, 500px"
+                  sizes="(max-width: 1023px) 92vw, 440px"
                 />
               </div>
 
-              {/* Compact Floating Card: "Mahasiswa Berkemajuan" (Floated at bottom-[18%] next to laptop) */}
-              <div className="absolute bottom-[18%] sm:bottom-[20%] left-[-6px] sm:left-0 z-20 max-w-[145px] min-[400px]:max-w-[170px] sm:max-w-[220px]">
-                <div className="bg-white/95 backdrop-blur-md rounded-xl p-1.5 sm:p-2.5 shadow-lg shadow-slate-900/15 border border-slate-100 flex items-center gap-1.5 sm:gap-2">
-                  <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91]">
-                    <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.8]" />
+              {/* Compact Floating Card: "Mahasiswa Berkemajuan" */}
+              <div className="absolute bottom-2.5 left-2.5 z-20 max-w-[190px] sm:max-w-[220px]">
+                <div className="bg-white/95 backdrop-blur-md rounded-xl p-2 sm:p-2.5 shadow-lg shadow-slate-900/15 border border-slate-100 flex items-center gap-2">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91]">
+                    <GraduationCap className="w-4 h-4 stroke-[1.8]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-heading font-extrabold text-[8.5px] min-[400px]:text-[9.5px] sm:text-xs text-[#0A192F] tracking-tight leading-tight truncate">
+                    <h4 className="font-heading font-extrabold text-[10px] sm:text-xs text-[#0A192F] tracking-tight leading-tight truncate">
                       Mahasiswa Berkemajuan
                     </h4>
-                    <p className="text-[7px] min-[400px]:text-[8px] sm:text-[9.5px] text-slate-500 font-medium leading-tight truncate">
+                    <p className="text-[8.5px] sm:text-[9.5px] text-slate-500 font-medium leading-tight truncate">
                       Berilmu, Berakhlak
                     </p>
                   </div>
                   <Link
                     href="#kemahasiswaan"
                     aria-label="Pelajari Mahasiswa Berkemajuan"
-                    className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-slate-100 hover:bg-[#14B8A6] hover:text-white text-slate-600 flex items-center justify-center transition-colors"
+                    className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 hover:bg-[#14B8A6] hover:text-white text-slate-600 flex items-center justify-center transition-colors"
                   >
-                    <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                    <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </div>
 
-              {/* Compact Fastabiqul Khairat (Bottom-right inside navy curve, beneath the card) */}
-              <div className="absolute bottom-1.5 sm:bottom-2.5 right-2 sm:right-3.5 z-20 text-right select-none">
-                <span className="block text-[7.5px] min-[400px]:text-[8.5px] sm:text-[10px] tracking-[0.16em] font-bold text-[#2DD4BF] uppercase">
+              {/* Compact Fastabiqul Khairat at Bottom-right */}
+              <div className="absolute bottom-2 right-3 z-20 text-right select-none">
+                <span className="block text-[8.5px] sm:text-[10px] tracking-[0.16em] font-bold text-[#2DD4BF] uppercase">
                   FASTABIQUL KHAIRAT
                 </span>
-                <span className="block text-[6.5px] min-[400px]:text-[7.5px] sm:text-[9px] text-slate-300 italic">
+                <span className="block text-[7.5px] sm:text-[9px] text-slate-300 italic">
                   “Berlomba dalam kebaikan”
                 </span>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Mobile/Tablet Subtle Scroll Indicator */}
-        <div className="lg:hidden w-full flex items-center justify-center pt-3 pb-1">
-          <button
-            type="button"
-            onClick={scrollToNextSection}
-            className="flex items-center gap-2 text-slate-400 hover:text-[#14B8A6] text-[9.5px] sm:text-xs font-medium transition-colors focus:outline-none"
-          >
-            <div className="w-3.5 h-5 rounded-full border border-slate-300 flex items-start justify-center p-0.5">
-              <div className="w-0.5 h-1 bg-slate-400 rounded-full animate-bounce" />
-            </div>
-            <span>Scroll untuk jelajahi lebih lanjut</span>
-          </button>
         </div>
       </div>
 

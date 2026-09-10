@@ -9,11 +9,11 @@ export default function Footer() {
       {/* Subtle Ambient Mint Light at Bottom */}
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-[#14B8A6]/[0.035] blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-16 sm:pt-20 pb-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 relative z-10">
         {/* ================================================================= */}
         {/* 4-COLUMN RESPONSIVE GRID (Desktop 4-col, Tablet 2-col, Mobile 1-col) */}
         {/* ================================================================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-10">
           {/* ------------------------------------------------------------- */}
           {/* KOLOM 1: BRAND IDENTITY & DESCRIPTION                         */}
           {/* ------------------------------------------------------------- */}
@@ -240,7 +240,7 @@ export default function Footer() {
         {/* ================================================================= */}
         {/* FOOTER BOTTOM: DIVIDER & COPYRIGHT                                */}
         {/* ================================================================= */}
-        <div className="border-t border-white/[0.08] mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="border-t border-white/[0.08] mt-10 sm:mt-14 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p className="text-center sm:text-left">
             © 2026 SiberMu — Universitas Siber Muhammadiyah. Seluruh hak cipta dilindungi.
           </p>

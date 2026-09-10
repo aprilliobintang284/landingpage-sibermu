@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section
       id="cta"
-      className="scroll-mt-20 relative py-18 sm:py-20 md:py-24 lg:py-28 bg-[#F0FBF9] border-t border-slate-200/80 overflow-hidden"
+      className="scroll-mt-20 relative py-14 sm:py-20 md:py-24 lg:py-28 bg-[#F0FBF9] border-t border-slate-200/80 overflow-hidden"
     >
       {/* =================================================================== */}
       {/* 1. AMBIENT TURQUOISE & MINT GLOW                                    */}
@@ -102,7 +102,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-[#0A192F] tracking-tight leading-[1.14] mb-5 sm:mb-6"
+            className="font-heading font-extrabold text-[26px] min-[360px]:text-[30px] sm:text-4xl md:text-5xl lg:text-[50px] text-[#0A192F] tracking-tight leading-[1.15] mb-4 sm:mb-6"
           >
             Siap Memulai Perjalananmu{" "}
             <span className="text-[#14B8A6]">Bersama SiberMu?</span>
@@ -113,7 +113,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 sm:mb-9"
+            className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mb-6 sm:mb-9"
           >
             Kembangkan potensimu dalam berbagai bidang dan teguhkan karaktermu
             melalui nilai-nilai AI-Islam dan Kemuhammadiyahan.
@@ -124,11 +124,11 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto"
           >
             <Link
               href="#kemahasiswaan"
-              className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-[14px] bg-[#14B8A6] text-white font-heading font-bold text-sm sm:text-base tracking-wide shadow-md shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2.5 h-12 sm:h-[52px] px-7 sm:px-8 rounded-xl sm:rounded-[14px] bg-[#14B8A6] text-white font-heading font-bold text-sm sm:text-base tracking-wide shadow-md shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
               <span>Mulai Eksplorasi</span>
               <ArrowRight className="w-4 h-4 stroke-[2.2]" />
@@ -138,7 +138,7 @@ export default function CTASection() {
               href="https://sibermu.ac.id"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-[14px] border border-slate-300/90 bg-white/70 hover:bg-white text-[#0A192F] font-heading font-semibold text-sm sm:text-base hover:border-[#14B8A6] hover:text-[#14B8A6] shadow-sm transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 h-12 sm:h-[52px] px-6 sm:px-7 rounded-xl sm:rounded-[14px] border border-slate-300/90 bg-white/70 hover:bg-white text-[#0A192F] font-heading font-semibold text-sm sm:text-base hover:border-[#14B8A6] hover:text-[#14B8A6] shadow-sm transition-all duration-200"
             >
               <span>Hubungi Kami</span>
             </Link>

@@ -41,15 +41,15 @@ export default function AikSection() {
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
         {/* =================================================================== */}
-        {/* EDITORIAL SPLIT LAYOUT — VERTICALLY CENTERED                        */}
+        {/* EDITORIAL SPLIT LAYOUT (Single-col stacked on Mobile, Split on Desktop) */}
         {/* =================================================================== */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 lg:items-center">
           {/* --------------------------------------------------------------- */}
-          {/* AREA KIRI: Eyebrow, Heading, Intro & Large Geometric Anchor    */}
+          {/* SECTION HEADER: Eyebrow, Heading, Intro & Subtle Motif          */}
           {/* --------------------------------------------------------------- */}
           <div className="lg:col-span-5 relative flex flex-col justify-center">
-            {/* SATU Decorative Visual Anchor: Large subtle Islamic 8-point geometric star */}
-            <div className="absolute -top-12 -left-12 sm:-top-16 sm:-left-16 lg:-top-20 lg:-left-20 w-[380px] h-[380px] sm:w-[440px] sm:h-[440px] lg:w-[480px] lg:h-[480px] pointer-events-none -z-10 opacity-[0.065] text-[#14B8A6]">
+            {/* Visual Anchor: Subtle Islamic 8-point geometric star (Delicate on mobile) */}
+            <div className="absolute -top-8 -right-8 sm:-top-16 sm:-left-16 lg:-top-20 lg:-left-20 w-[240px] h-[240px] sm:w-[420px] sm:h-[420px] lg:w-[480px] lg:h-[480px] pointer-events-none -z-10 opacity-[0.03] sm:opacity-[0.045] lg:opacity-[0.065] text-[#14B8A6]">
               <svg
                 viewBox="0 0 200 200"
                 className="w-full h-full stroke-current fill-none"
@@ -121,7 +121,7 @@ export default function AikSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="flex items-center gap-3 mb-4"
+              className="flex items-center gap-2.5 sm:gap-3 mb-2.5 sm:mb-4"
             >
               <span className="w-8 h-[1.5px] bg-[#14B8A6]" />
               <span className="font-heading text-xs font-bold uppercase tracking-[0.22em] text-[#0F9F91]">
@@ -134,7 +134,7 @@ export default function AikSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: 0.08 }}
-              className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.15] mb-4 sm:mb-5"
+              className="font-heading font-extrabold text-[32px] sm:text-4xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.15] mb-3 sm:mb-5"
             >
               Teguhkan{" "}
               <span className="text-[#14B8A6]">Karakter</span>
@@ -145,7 +145,7 @@ export default function AikSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: 0.15 }}
-              className="text-slate-600 text-base sm:text-[17px] leading-relaxed max-w-lg"
+              className="text-slate-600 text-base sm:text-[17px] leading-relaxed max-w-lg mb-2 sm:mb-0"
             >
               Membangun mahasiswa yang berilmu, beriman, berakhlak, dan
               berkemajuan melalui pembinaan AI-Islam dan Kemuhammadiyahan.
@@ -153,7 +153,7 @@ export default function AikSection() {
           </div>
 
           {/* --------------------------------------------------------------- */}
-          {/* AREA KANAN: 4 AIK Items dalam Vertical Editorial List Konsisten   */}
+          {/* ITEMS: 4 AIK Items dalam Vertical Editorial List                */}
           {/* --------------------------------------------------------------- */}
           <div className="lg:col-span-7 flex flex-col">
             {aikItems.map((item, index) => {
@@ -169,20 +169,20 @@ export default function AikSection() {
                   transition={{ duration: 0.45, delay: index * 0.08 }}
                   className={`group ${
                     !isLast
-                      ? "py-6 sm:py-7 border-b border-slate-200/75 hover:border-[#14B8A6]/30"
-                      : "pt-6 sm:pt-7"
+                      ? "py-4 sm:py-6 lg:py-7 border-b border-slate-200/75 hover:border-[#14B8A6]/30"
+                      : "pt-4 sm:pt-6 lg:pt-7"
                   } transition-colors duration-200`}
                 >
-                  <div className="flex items-start gap-4 sm:gap-5">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91] flex-shrink-0 group-hover:scale-105 group-hover:bg-[#14B8A6] group-hover:text-white transition-all duration-200 shadow-sm shadow-[#14B8A6]/10">
+                  <div className="flex items-start gap-3.5 sm:gap-5">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#DDF7F3] border border-[#14B8A6]/20 flex items-center justify-center text-[#0F9F91] flex-shrink-0 group-hover:scale-105 group-hover:bg-[#14B8A6] group-hover:text-white transition-all duration-200 shadow-sm shadow-[#14B8A6]/10">
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.9]" />
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#0A192F] tracking-tight mb-1.5 group-hover:text-[#0F9F91] transition-colors duration-200">
+                      <h3 className="font-heading font-bold text-lg sm:text-xl md:text-2xl text-[#0A192F] tracking-tight mb-1 sm:mb-1.5 group-hover:text-[#0F9F91] transition-colors duration-200">
                         {item.title}
                       </h3>
-                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                      <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
