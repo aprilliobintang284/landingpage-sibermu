@@ -251,7 +251,7 @@ export default function HeroSection() {
           {/* Asymmetric composition matching screenshot reference                  */}
           {/* Uses transparent /hero/hero-mobile.png directly on light canvas       */}
           {/* ===================================================================== */}
-          <div className="col-span-12 lg:hidden relative w-full flex flex-col items-end -mt-[76px] min-[360px]:-mt-[102px] sm:-mt-[68px] z-10 select-none">
+          <div className="col-span-12 lg:hidden relative w-full flex flex-col items-end -mt-[195px] min-[360px]:-mt-[245px] sm:-mt-[210px] z-10 select-none">
             {/* Visual Wrapper: Aligned right, laptop shifted inward from left */}
             <div className="relative w-[94%] min-[360px]:w-[91%] sm:w-[84%] max-w-[420px] mr-[-16px] min-[360px]:mr-[-22px] sm:mr-0">
               {/* Transparent PNG Hero Mobile Asset */}
