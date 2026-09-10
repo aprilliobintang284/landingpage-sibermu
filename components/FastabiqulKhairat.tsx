@@ -14,14 +14,14 @@ export default function FastabiqulKhairat() {
   return (
     <section
       id="fastabiqul-khairat"
-      className="scroll-mt-24 relative -mt-12 sm:-mt-16 md:-mt-20 z-20 pt-12 pb-12 sm:pt-14 sm:pb-14 md:pt-16 md:pb-16 bg-gradient-to-b from-[#09162C] via-[#060E1D] to-[#040914] rounded-t-[36px] sm:rounded-t-[48px] md:rounded-t-[60px] border-t border-[#14B8A6]/25 shadow-[0_-12px_35px_rgba(4,9,20,0.16)] overflow-hidden flex flex-col items-center justify-center text-center"
+      className="scroll-mt-24 relative -mt-12 sm:-mt-16 md:-mt-20 z-20 pt-12 pb-12 sm:pt-14 sm:pb-14 md:pt-16 md:pb-16 bg-gradient-to-b from-[#0E2445] via-[#0B1E3B] to-[#091A33] rounded-t-[36px] sm:rounded-t-[48px] md:rounded-t-[60px] border-t border-[#14B8A6]/30 shadow-[0_-10px_30px_rgba(11,30,59,0.12)] overflow-hidden flex flex-col items-center justify-center text-center"
     >
-      {/* Subtle turquoise glow near the top transition boundary */}
+      {/* Subtle turquoise ambient glow with teal undertone */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(ellipse 65% 50% at 30% 0%, rgba(20, 184, 166, 0.15), transparent 70%), radial-gradient(ellipse 45% 35% at 75% 100%, rgba(15, 159, 145, 0.06), transparent 65%)",
+            "radial-gradient(ellipse 65% 50% at 30% 0%, rgba(20, 184, 166, 0.18), transparent 70%), radial-gradient(ellipse 55% 40% at 75% 100%, rgba(45, 212, 191, 0.09), transparent 65%)",
         }}
       />
 

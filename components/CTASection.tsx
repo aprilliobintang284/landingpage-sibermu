@@ -9,18 +9,18 @@ export default function CTASection() {
   return (
     <section
       id="cta"
-      className="scroll-mt-20 relative py-18 sm:py-20 md:py-24 lg:py-28 bg-[#040914] border-t border-white/10 overflow-hidden"
+      className="scroll-mt-20 relative py-18 sm:py-20 md:py-24 lg:py-28 bg-[#F0FBF9] border-t border-slate-200/80 overflow-hidden"
     >
       {/* =================================================================== */}
       {/* 1. AMBIENT TURQUOISE & MINT GLOW                                    */}
       {/* =================================================================== */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-1/4 -right-1/4 w-[600px] h-[600px] bg-[#14B8A6]/[0.08] blur-[130px] rounded-full" />
-        <div className="absolute -bottom-1/4 left-1/4 w-[450px] h-[450px] bg-[#14B8A6]/[0.04] blur-[100px] rounded-full" />
+        <div className="absolute -top-1/4 -right-1/4 w-[600px] h-[600px] bg-[#14B8A6]/[0.07] blur-[130px] rounded-full" />
+        <div className="absolute -bottom-1/4 left-1/4 w-[450px] h-[450px] bg-[#2DD4BF]/[0.05] blur-[100px] rounded-full" />
       </div>
 
       {/* =================================================================== */}
-      {/* 2. ABSTRACT & ORGANIC FLOWING CURVES (Inspired by Hero visual)     */}
+      {/* 2. ABSTRACT & ORGANIC FLOWING CURVES (Light Canvas Harmony)        */}
       {/* Integrated into canvas — NOT an isolated object                      */}
       {/* =================================================================== */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[62%] h-full pointer-events-none overflow-hidden select-none">
@@ -33,17 +33,17 @@ export default function CTASection() {
           <defs>
             <linearGradient id="cta-curve-1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#14B8A6" stopOpacity="0" />
-              <stop offset="45%" stopColor="#14B8A6" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#2DD4BF" stopOpacity="0.08" />
+              <stop offset="45%" stopColor="#14B8A6" stopOpacity="0.32" />
+              <stop offset="100%" stopColor="#2DD4BF" stopOpacity="0.05" />
             </linearGradient>
             <linearGradient id="cta-curve-2" x1="0%" y1="100%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#2DD4BF" stopOpacity="0" />
-              <stop offset="40%" stopColor="#14B8A6" stopOpacity="0.28" />
-              <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
+              <stop offset="40%" stopColor="#14B8A6" stopOpacity="0.24" />
+              <stop offset="100%" stopColor="#14B8A6" stopOpacity="0.8" />
             </linearGradient>
             <radialGradient id="cta-ambient-glow" cx="70%" cy="40%" r="50%">
-              <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.1" />
-              <stop offset="100%" stopColor="#040914" stopOpacity="0" />
+              <stop offset="0%" stopColor="#14B8A6" stopOpacity="0.06" />
+              <stop offset="100%" stopColor="#F0FBF9" stopOpacity="0" />
             </radialGradient>
           </defs>
 
@@ -70,7 +70,7 @@ export default function CTASection() {
             stroke="#14B8A6"
             strokeWidth="1"
             strokeDasharray="5 7"
-            opacity="0.32"
+            opacity="0.25"
           />
 
           {/* Sweeping Dynamic Trajectory Curve */}
@@ -78,7 +78,7 @@ export default function CTASection() {
             d="M 290 -80 C 440 80, 680 270, 720 620"
             stroke="#2DD4BF"
             strokeWidth="1"
-            opacity="0.2"
+            opacity="0.18"
           />
 
           {/* Gentle Floating Wave Curve */}
@@ -87,7 +87,7 @@ export default function CTASection() {
             stroke="#14B8A6"
             strokeWidth="1.2"
             strokeDasharray="3 5"
-            opacity="0.22"
+            opacity="0.2"
           />
         </svg>
       </div>
@@ -102,7 +102,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-white tracking-tight leading-[1.14] mb-5 sm:mb-6"
+            className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-[#0A192F] tracking-tight leading-[1.14] mb-5 sm:mb-6"
           >
             Siap Memulai Perjalananmu{" "}
             <span className="text-[#14B8A6]">Bersama SiberMu?</span>
@@ -113,7 +113,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 sm:mb-9"
+            className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 sm:mb-9"
           >
             Kembangkan potensimu dalam berbagai bidang dan teguhkan karaktermu
             melalui nilai-nilai AI-Islam dan Kemuhammadiyahan.
@@ -128,7 +128,7 @@ export default function CTASection() {
           >
             <Link
               href="#kemahasiswaan"
-              className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-[14px] bg-[#14B8A6] text-[#0A192F] font-heading font-bold text-sm sm:text-base tracking-wide shadow-lg shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:text-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2.5 h-[52px] px-8 rounded-[14px] bg-[#14B8A6] text-white font-heading font-bold text-sm sm:text-base tracking-wide shadow-md shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
               <span>Mulai Eksplorasi</span>
               <ArrowRight className="w-4 h-4 stroke-[2.2]" />
@@ -138,7 +138,7 @@ export default function CTASection() {
               href="https://sibermu.ac.id"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-[14px] border border-white/20 bg-white/[0.03] text-white font-heading font-semibold text-sm sm:text-base hover:border-[#14B8A6] hover:text-[#14B8A6] hover:bg-[#14B8A6]/[0.05] transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-[14px] border border-slate-300/90 bg-white/70 hover:bg-white text-[#0A192F] font-heading font-semibold text-sm sm:text-base hover:border-[#14B8A6] hover:text-[#14B8A6] shadow-sm transition-all duration-200"
             >
               <span>Hubungi Kami</span>
             </Link>

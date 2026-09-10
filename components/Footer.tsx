@@ -5,9 +5,9 @@ import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#020611] text-slate-400 text-sm border-t border-white/[0.08] overflow-hidden">
+    <footer className="relative bg-[#07152B] text-slate-400 text-sm border-t border-white/[0.08] overflow-hidden">
       {/* Subtle Ambient Mint Light at Bottom */}
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-[#14B8A6]/[0.025] blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-[#14B8A6]/[0.035] blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-16 sm:pt-20 pb-12 relative z-10">
         {/* ================================================================= */}
