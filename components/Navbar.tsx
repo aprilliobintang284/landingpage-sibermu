@@ -158,10 +158,10 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <>
-          {/* Subtle backdrop overlay for contrast against page content */}
+          {/* Invisible backdrop to detect clicks outside drawer and close menu */}
           <div
             onClick={() => setMobileMenuOpen(false)}
-            className="fixed inset-0 top-[57px] sm:top-[65px] bg-[#0A192F]/10 backdrop-blur-[1px] z-[-1] md:hidden transition-opacity duration-200"
+            className="fixed inset-0 top-[57px] sm:top-[65px] z-[-1] md:hidden"
             aria-hidden="true"
           />
 
