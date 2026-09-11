@@ -155,18 +155,19 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Floating Mobile Drawer Menu (Out of document flow so header does not expand) */}
       {mobileMenuOpen && (
         <>
-          {/* Invisible backdrop to detect clicks outside drawer and close menu */}
+          {/* Full-screen invisible backdrop to detect clicks outside drawer and close menu */}
           <div
             onClick={() => setMobileMenuOpen(false)}
-            className="fixed inset-0 top-[57px] sm:top-[65px] z-[-1] md:hidden"
+            className="fixed inset-0 z-40 md:hidden"
             aria-hidden="true"
           />
 
-          <div className="md:hidden mt-2 px-4 pt-1 pb-5">
-            <div className="rounded-2xl bg-white/98 border border-slate-200/90 backdrop-blur-xl p-4 shadow-[0_16px_36px_-6px_rgba(10,25,47,0.14)] space-y-3">
+          {/* Floating Drawer Card - strictly sized to its content, no extra vertical space */}
+          <div className="absolute top-full left-0 right-0 px-4 pt-2.5 pointer-events-none md:hidden z-50">
+            <div className="rounded-2xl bg-white/98 border border-slate-200/90 shadow-[0_16px_36px_-6px_rgba(10,25,47,0.16)] p-4 space-y-3 pointer-events-auto">
               <div className="flex flex-col space-y-1">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.href.slice(1);
