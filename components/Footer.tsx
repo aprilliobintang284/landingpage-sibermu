@@ -283,11 +283,16 @@ export default function Footer() {
               </span>
             </div>
 
-            <div className="text-[11px] text-slate-500 flex-shrink-0 flex items-center gap-1.5">
-              <span>Lihat detail sumber aset →</span>
-              <span className="text-slate-400 font-mono text-[10px] bg-white/[0.04] px-1.5 py-0.5 rounded border border-white/[0.08]">
-                ASSET-SOURCES.md
-              </span>
+            <div className="flex-shrink-0">
+              <a
+                href="https://github.com/aprilliobintang284/landingpage-sibermu/blob/main/ASSET-SOURCES.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1 text-[11px] text-slate-400 hover:text-[#14B8A6] transition-colors duration-200 py-0.5"
+              >
+                <span>Lihat detail sumber aset</span>
+                <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
+              </a>
             </div>
           </div>
         </div>
