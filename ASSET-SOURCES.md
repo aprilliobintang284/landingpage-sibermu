@@ -19,10 +19,10 @@
 | **Islamic Geometric Khatam** | `components/AikSection.tsx` (L71-100) | Background / Dekorasi Geometris | Rumus matematika geometri bintang 8 sudut (Khatam) | Kode Internal Project | Proyek Internal SiberMu | Tidak Wajib | **SAFE / JELAS** | Ornamen vektor bintang delapan dan lingkaran orbital Islami dibuat langsung dengan elemen `<rect>` dan `<circle>`. |
 | **Decorative Flow Curves** | `components/CTASection.tsx` (L28-50) | Background / Dekorasi Vektor | Kode SVG kustom gradient curve | Kode Internal Project | Proyek Internal SiberMu | Tidak Wajib | **SAFE / JELAS** | Kurva gelombang abstrak dengan linear gradient tosca/teal. |
 | **Decorative Circle Watermark** | `components/KemahasiswaanSection.tsx` (L139) | Background / Dekorasi Vektor | Kode SVG lingkaran konsentris | Kode Internal Project | Proyek Internal SiberMu | Tidak Wajib | **SAFE / JELAS** | Elemen lingkaran watermark minimalis pada kartu Organisasi Mahasiswa. |
-| **Font Plus Jakarta Sans** | Google Fonts (`next/font/google`) | Font Web | Tokotype (Gumpita Rahayu) via Google Fonts | [fonts.google.com](https://fonts.google.com/specimen/Plus+Jakarta+Sans) | SIL Open Font License 1.1 (OFL) | Tidak Wajib untuk web font embedding | **SAFE / JELAS** | Tipografi utama untuk semua heading (`h1` - `h6`, `font-heading`). Bebas untuk komersial & lomba. |
-| **Font Inter** | Google Fonts (`next/font/google`) | Font Web | Rasmus Andersson via Google Fonts | [fonts.google.com](https://fonts.google.com/specimen/Inter) | SIL Open Font License 1.1 (OFL) | Tidak Wajib untuk web font embedding | **SAFE / JELAS** | Tipografi body text dan antarmuka umum (`font-sans`). Bebas untuk komersial & lomba. |
-| **Font Caveat** | Google Fonts (`next/font/google`) | Font Web | Kimberly Geswein via Google Fonts | [fonts.google.com](https://fonts.google.com/specimen/Caveat) | SIL Open Font License 1.1 (OFL) | Tidak Wajib untuk web font embedding | **SAFE / JELAS** | Font tulisan tangan aksen dekoratif pada `HeroSection.tsx`. Bebas untuk komersial & lomba. |
-| **Video Profil (Modal)** | `components/HeroSection.tsx` (L351) | Video Embed | YouTube (`dQw4w9WgXcQ` - Rick Astley) | [youtube.com](https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ) | Standard YouTube License (Placeholder) | Wajib diganti atau dinonaktifkan | **PERLU VERIFIKASI** | **PLACEHOLDER / PERLU DIGANTI**: Video saat ini merupakan video demo placeholder (Rickroll). Sebelum submission, URL video harus diganti dengan video resmi SiberMu, ATAU fitur video dihapus/dinonaktifkan jika tidak diperlukan. |
+| **Font Plus Jakarta Sans** | Google Fonts (`next/font/google`) | Font Web | Tokotype (Gumpita Rahayu) via Google Fonts | [fonts.google.com](https://fonts.google.com/specimen/Plus+Jakarta+Sans) | SIL Open Font License 1.1 (OFL) | Tidak Wajib untuk web font embedding | **SAFE / JELAS** | Tipografi utama untuk semua heading (`h1` - `h6`, `font-heading`). Menggunakan SIL Open Font License 1.1 (OFL). |
+| **Font Inter** | Google Fonts (`next/font/google`) | Font Web | Rasmus Andersson via Google Fonts | [fonts.google.com](https://fonts.google.com/specimen/Inter) | SIL Open Font License 1.1 (OFL) | Tidak Wajib untuk web font embedding | **SAFE / JELAS** | Tipografi body text dan antarmuka umum (`font-sans`). Menggunakan SIL Open Font License 1.1 (OFL). |
+| **Font Caveat** | Google Fonts (`next/font/google`) | Font Web | Kimberly Geswein via Google Fonts | [fonts.google.com](https://fonts.google.com/specimen/Caveat) | SIL Open Font License 1.1 (OFL) | Tidak Wajib untuk web font embedding | **SAFE / JELAS** | Font tulisan tangan aksen dekoratif pada `HeroSection.tsx`. Menggunakan SIL Open Font License 1.1 (OFL). |
+| **Video Profil / Perkenalan SiberMu** | `components/HeroSection.tsx` (L351) | Video Embed | YouTube — video perkenalan SiberMu | [youtube.com](https://www.youtube.com/watch?v=rkb0SToPreg) | Standard YouTube Embed Terms | Tidak Wajib (Official Video Embed) | **SAFE / JELAS** | Digunakan pada fitur modal "Tonton Video" di HeroSection. Embed resmi video perkenalan Universitas Siber Muhammadiyah. |
 | **Default Next.js SVGs** | `public/*.svg` (`file.svg`, `globe.svg`, `next.svg`, `vercel.svg`, `window.svg`) | SVG Icons | Vercel Next.js Starter Template | [github.com/vercel/next.js](https://github.com/vercel/next.js) | MIT License | Tidak Wajib | **SAFE / JELAS** | File bawaan scaffold `create-next-app` (tidak aktif dipanggil di komponen aplikasi). |
 | **Next.js & React Framework** | `next`, `react`, `react-dom` | Software Dependency | Vercel Inc. & Meta Platforms Inc. | [nextjs.org](https://nextjs.org/) | MIT License | Tidak Wajib | **SAFE / JELAS** | Framework utama aplikasi web. |
 | **Tailwind CSS v4** | `tailwindcss`, `@tailwindcss/postcss` | Software Dependency | Tailwind Labs Inc. | [tailwindcss.com](https://tailwindcss.com/) | MIT License | Tidak Wajib | **SAFE / JELAS** | Framework utilitas styling CSS. |
@@ -36,13 +36,14 @@ Aset-aset berikut memiliki sumber, kepemilikan, dan lisensi yang jelas:
 1. **Logo Resmi Universitas Siber Muhammadiyah (`sibermu-logo.png`)**:
    - Logo Universitas Siber Muhammadiyah digunakan sebagai identitas resmi institusi dalam landing page Biro Kemahasiswaan & AIK.
 2. **Font Web Google Fonts (Plus Jakarta Sans, Inter, Caveat)**:
-   - Dilindungi di bawah lisensi resmi **SIL Open Font License 1.1 (OFL)**.
-   - Mengizinkan penggunaan, modifikasi, dan distribusi secara gratis untuk kebutuhan non-komersial, komersial, maupun perlombaan.
+   - Font web menggunakan lisensi **SIL Open Font License 1.1 (OFL)**.
 3. **Pustaka Ikon Lucide React (`lucide-react`)**:
    - Seluruh ikon antarmuka (`ArrowRight`, `Users`, `Trophy`, `GraduationCap`, dll.) berlisensi **ISC License** yang permisif dan bebas royalti.
 4. **Custom Code SVG (MosqueDomeIcon, Khatam Star, CTA Waves)**:
    - Dibuat secara mandiri menggunakan kode vektor SVG langsung di dalam komponen TSX. Tidak menggunakan gambar/vektor unduhan pihak ketiga.
-5. **Pustaka Open Source (Next.js, React, Tailwind CSS, Framer Motion)**:
+5. **Video Perkenalan SiberMu (Modal Embed)**:
+   - Ditampilkan melalui embed resmi YouTube dari video pengenalan kampus Universitas Siber Muhammadiyah (`rkb0SToPreg`).
+6. **Pustaka Open Source (Next.js, React, Tailwind CSS, Framer Motion)**:
    - Seluruh dependency menggunakan lisensi open-source terpercaya (**MIT License**).
 
 ---
@@ -50,17 +51,11 @@ Aset-aset berikut memiliki sumber, kepemilikan, dan lisensi yang jelas:
 ## 🟡 PERLU VERIFIKASI
 Aset-aset berikut membutuhkan verifikasi atau tindakan penyesuaian sebelum penyelesaian proyek:
 
-1. **Visual Hero Desktop & Mobile (`hero-desktop.png`, `hero-dekstop.png`, `hero-mobile.png`, `hero-image.png`)**:
+1. **Visual Hero Desktop & Mobile (`hero-desktop.png`, `hero-dekstop.png`, `hero-mobile.png`)**:
    - **Sumber**: AI-generated menggunakan Freepik / Magnific.
    - **Status**: **PERLU VERIFIKASI**.
    - **Catatan**: Ketentuan penggunaan perlu diverifikasi berdasarkan paket/akun Free yang digunakan dan *Terms of Use* yang berlaku saat aset dibuat. Penggunaan untuk keperluan lomba perlu disesuaikan dengan ketentuan platform dan ketentuan lomba yang berlaku.
-2. **Video Modal Embed (`components/HeroSection.tsx` baris 351)**:
-   - **Status**: **PLACEHOLDER / PERLU DIGANTI**.
-   - **Kondisi**: URL embed saat ini masih mengarah ke video demo placeholder Rick Astley (`dQw4w9WgXcQ`).
-   - **Catatan**: Sebelum submission, URL video tersebut harus:
-     - diganti dengan video resmi SiberMu, ATAU
-     - fitur video dihapus/dinonaktifkan jika memang tidak diperlukan.
-3. **Aset Legacy `hero-image.png`**:
+2. **Aset Legacy `hero-image.png`**:
    - **Kondisi**: Berada di folder `public/images/hero/`, merupakan aset cadangan yang tidak aktif dipanggil di kode komponen.
    - **Catatan**: Bersumber dari proses generasi yang sama (Freepik / Magnific Free Plan).
 
@@ -99,18 +94,21 @@ Teks kredit berikut dapat langsung disalin ke dalam lembar orisinalitas atau lam
 2. Aset Visual & Ilustrasi:
    - Visual Hero Desktop & Mobile — AI-generated menggunakan Freepik / Magnific berdasarkan konsep dan prompt yang disusun khusus untuk project, kemudian disesuaikan untuk kebutuhan landing page.
 
-3. Elemen Vektor & Ornamen:
+3. Multimedia:
+   - Video profil/perkenalan SiberMu — embedded from official SiberMu YouTube video.
+
+4. Elemen Vektor & Ornamen:
    - Kubah Masjid, Bintang Khatam 8 Sudut, dan Gelombang Abstrak — dibuat secara mandiri menggunakan kode SVG inline.
 
-4. Tipografi:
+5. Tipografi:
    - Plus Jakarta Sans — SIL Open Font License 1.1.
    - Inter — SIL Open Font License 1.1.
    - Caveat — SIL Open Font License 1.1.
 
-5. Ikonografi:
+6. Ikonografi:
    - Lucide Icons / Lucide React — ISC License.
 
-6. Framework & Libraries:
+7. Framework & Libraries:
    - Next.js
    - React
    - Tailwind CSS
