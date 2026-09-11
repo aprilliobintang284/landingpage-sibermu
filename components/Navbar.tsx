@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { scrollToId } from "@/lib/utils";
 
 interface NavItem {
   name: string;
@@ -47,6 +48,7 @@ export default function Navbar() {
           {/* Logo & Official Brand Identity */}
           <Link
             href="#hero"
+            onClick={(e) => scrollToId("hero", e)}
             className="group flex items-center gap-2.5 sm:gap-3 focus:outline-none rounded-xl"
           >
             {/* Official SiberMu Emblem Logo */}
@@ -92,6 +94,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
+                onClick={(e) => scrollToId(item.href, e)}
                 className={`px-3.5 lg:px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
                   isScrolled
                     ? "text-slate-300 hover:text-white hover:bg-white/10"
@@ -107,6 +110,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="#cta"
+              onClick={(e) => scrollToId("cta", e)}
               className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-[13px] text-sm font-semibold text-white bg-[#14B8A6] hover:bg-[#0F9F91] shadow-md shadow-[#14B8A6]/20 hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 transition-all duration-200"
             >
               <span>Portal Layanan</span>
@@ -145,7 +149,10 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    setMobileMenuOpen(false);
+                    scrollToId(item.href, e);
+                  }}
                   className="px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:text-[#2DD4BF] hover:bg-white/5 transition-colors"
                 >
                   {item.name}
@@ -156,7 +163,10 @@ export default function Navbar() {
             <div className="pt-2 border-t border-white/10">
               <Link
                 href="#cta"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  scrollToId("cta", e);
+                }}
                 className="flex items-center justify-center gap-2 w-full h-11 px-4 text-sm font-semibold text-white bg-[#14B8A6] hover:bg-[#0F9F91] rounded-[13px] transition-colors shadow-md shadow-[#14B8A6]/20"
               >
                 <span>Portal Layanan Mahasiswa</span>

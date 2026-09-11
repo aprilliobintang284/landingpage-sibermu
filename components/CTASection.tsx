@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { scrollToId } from "@/lib/utils";
 
 export default function CTASection() {
   return (
@@ -137,6 +138,7 @@ export default function CTASection() {
           >
             <Link
               href="#kemahasiswaan"
+              onClick={(e) => scrollToId("kemahasiswaan", e)}
               className="inline-flex items-center justify-center gap-2.5 h-12 sm:h-[52px] px-8 rounded-full bg-[#14B8A6] text-white font-heading font-bold text-sm sm:text-base tracking-wide shadow-md shadow-[#14B8A6]/20 hover:bg-[#0D9488] hover:shadow-lg hover:shadow-[#14B8A6]/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 w-full sm:w-auto"
             >
               <span>Mulai Eksplorasi</span>

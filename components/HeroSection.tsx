@@ -13,6 +13,7 @@ import {
   X,
   ChevronRight,
 } from "lucide-react";
+import { scrollToId } from "@/lib/utils";
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -22,13 +23,6 @@ const caveat = Caveat({
 
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-
-  const scrollToNextSection = () => {
-    const nextSection = document.getElementById("kemahasiswaan");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section
@@ -98,6 +92,7 @@ export default function HeroSection() {
               </div>
               <Link
                 href="#kemahasiswaan"
+                onClick={(e) => scrollToId("kemahasiswaan", e)}
                 aria-label="Pelajari Mahasiswa Berkemajuan"
                 className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 hover:bg-[#14B8A6] hover:text-white text-slate-600 flex items-center justify-center transition-all duration-200 shadow-sm"
               >
@@ -190,6 +185,7 @@ export default function HeroSection() {
               {/* Primary CTA (Rounded-full pill button) */}
               <Link
                 href="#kemahasiswaan"
+                onClick={(e) => scrollToId("kemahasiswaan", e)}
                 className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 lg:h-[56px] px-6 sm:px-7 rounded-full font-semibold text-xs sm:text-sm lg:text-base text-white bg-[#0F9F91] hover:bg-[#0D8A7D] shadow-md shadow-[#0F9F91]/25 hover:shadow-lg hover:shadow-[#0F9F91]/35 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Jelajahi Sekarang</span>
@@ -219,7 +215,7 @@ export default function HeroSection() {
             {/* Desktop Scroll Indicator (Hidden on mobile & tablet) */}
             <motion.button
               type="button"
-              onClick={scrollToNextSection}
+              onClick={(e) => scrollToId("kemahasiswaan", e)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5 }}
@@ -288,7 +284,8 @@ export default function HeroSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="absolute bottom-7 left-3 right-5 min-[360px]:bottom-9 min-[360px]:left-4 min-[360px]:right-6 sm:bottom-10 md:bottom-12 md:left-6 md:right-auto md:max-w-[320px] lg:bottom-14 lg:left-8 lg:max-w-[340px] z-20 pointer-events-auto"
+                onClick={(e) => scrollToId("kemahasiswaan", e)}
+                className="absolute bottom-7 left-3 right-5 min-[360px]:bottom-9 min-[360px]:left-4 min-[360px]:right-6 sm:bottom-10 md:bottom-12 md:left-6 md:right-auto md:max-w-[320px] lg:bottom-14 lg:left-8 lg:max-w-[340px] z-20 pointer-events-auto cursor-pointer"
               >
                 <div className="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 min-[360px]:p-3 sm:p-3.5 md:p-4 shadow-[0_12px_32px_-6px_rgba(10,25,47,0.16)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3 md:gap-3.5">
                   <div className="flex-shrink-0 w-9 h-9 min-[360px]:w-10 min-[360px]:h-10 md:w-11 md:h-11 rounded-xl bg-[#E6F8F5] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
