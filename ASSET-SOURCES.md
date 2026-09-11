@@ -10,9 +10,9 @@
 | Asset | Path | Jenis | Sumber | URL | Lisensi | Attribution | Status | Catatan |
 |---|---|---|---|---|---|---|---|---|
 | **Logo SiberMu** | `public/icons/sibermu-logo.png` | Logo / Identitas Kampus | Identitas resmi Universitas Siber Muhammadiyah / SiberMu | [sibermu.ac.id](https://sibermu.ac.id) | Hak Cipta Universitas Siber Muhammadiyah | Tidak Wajib (Aset Kampus) | **SAFE / JELAS** | Logo resmi universitas, digunakan pada header, footer, favicon (`app/icon.png`, `app/apple-icon.png`). |
-| **Hero Desktop Artwork** | `public/images/hero/hero-desktop.png` (dan `hero-dekstop.png`) | AI-generated Image / Digital Composite | Dibuat khusus untuk proyek website SiberMu oleh kreator proyek (Aprillio Bintang Perdana) | Aset Internal Project (`commit 064b285`) | User-Created / AI Terms | Dianjurkan dicatat sebagai AI-assisted creation | **PERLU VERIFIKASI** | Visual mahasiswi berhijab dengan VR headset & laptop di atas ornamen navy/tosca. Perlu dicatat model AI yang digunakan jika lomba mewajibkan *AI disclosure*. |
-| **Hero Mobile Artwork** | `public/images/hero/hero-mobile.png` | AI-generated Image / Digital Composite | Dibuat khusus untuk proyek website SiberMu oleh kreator proyek (Aprillio Bintang Perdana) | Aset Internal Project (`commit 2e8c35c`) | User-Created / AI Terms | Dianjurkan dicatat sebagai AI-assisted creation | **PERLU VERIFIKASI** | Versi transparent cutout mahasiswi berhijab VR headset untuk tampilan smartphone/tablet. |
-| **Hero Image (Legacy)** | `public/images/hero/hero-image.png` | AI-generated Image | Disediakan oleh kreator proyek | Aset Internal Project (`commit 064b285`) | User-Created / AI Terms | Tidak Digunakan | **PERLU VERIFIKASI** | Aset gambar awal (square crop). Saat ini tidak aktif dipanggil dalam kode komponen. |
+| **Hero Desktop Artwork** | `public/images/hero/hero-desktop.png` (dan `hero-dekstop.png`) | AI-generated Image / Digital Composite | AI-generated menggunakan Freepik / Magnific | [freepik.com](https://www.freepik.com) / [magnific.ai](https://magnific.ai) | Freepik / Magnific Terms of Use | Tergantung jenis akun pembuat (Free/Premium) | **PERLU VERIFIKASI** | AI-generated menggunakan Freepik/Magnific. Ketentuan penggunaan perlu diverifikasi berdasarkan paket/akun dan Terms of Use yang berlaku saat aset dibuat. |
+| **Hero Mobile Artwork** | `public/images/hero/hero-mobile.png` | AI-generated Image / Digital Composite | AI-generated menggunakan Freepik / Magnific | [freepik.com](https://www.freepik.com) / [magnific.ai](https://magnific.ai) | Freepik / Magnific Terms of Use | Tergantung jenis akun pembuat (Free/Premium) | **PERLU VERIFIKASI** | AI-generated menggunakan Freepik/Magnific. Ketentuan penggunaan perlu diverifikasi berdasarkan paket/akun dan Terms of Use yang berlaku saat aset dibuat. |
+| **Hero Image (Legacy)** | `public/images/hero/hero-image.png` | AI-generated Image | AI-generated menggunakan Freepik / Magnific | [freepik.com](https://www.freepik.com) / [magnific.ai](https://magnific.ai) | Freepik / Magnific Terms of Use | Tidak Digunakan | **PERLU VERIFIKASI** | AI-generated menggunakan Freepik/Magnific. Ketentuan penggunaan perlu diverifikasi berdasarkan paket/akun dan Terms of Use yang berlaku saat aset dibuat. |
 | **Lucide React Icons** | Library dependency (`lucide-react`) | Icon Library (SVG Components) | Lucide Project Open Source | [lucide.dev](https://lucide.dev) | ISC License | Tidak Wajib (Permissive Open Source) | **SAFE / JELAS** | Mencakup icon: `Menu`, `X`, `ArrowRight`, `ArrowUpRight`, `ChevronRight`, `Play`, `GraduationCap`, `Sparkles`, `Users`, `Layers`, `Trophy`, `HeartHandshake`, `BookOpen`, `Radio`, `ShieldCheck`, `Mail`, `Phone`, `MapPin`. |
 | **Mosque Dome Icon** | `components/AikSection.tsx` (L8-23) | Custom SVG Icon | Dibuat langsung dalam kode komponen TSX | Kode Internal Project | Proyek Internal SiberMu | Tidak Wajib | **SAFE / JELAS** | Siluet kubah masjid / mihrab minimalis dibuat mandiri menggunakan path SVG standar 24x24. |
 | **Social Media Icons** | `components/Footer.tsx` (L64, L85, L105, L124) | SVG Vector Icons | Mengikuti spesifikasi SVG Lucide Icons | [lucide.dev](https://lucide.dev) | ISC License | Tidak Wajib | **SAFE / JELAS** | Ikon vektor Instagram, YouTube, TikTok, dan Facebook berbasis SVG outline. |
@@ -51,42 +51,42 @@ Aset-aset berikut memiliki sumber, kepemilikan, dan lisensi yang sah serta aman 
 ## 🟡 PERLU VERIFIKASI
 Aset-aset berikut membutuhkan perhatian atau tindakan verifikasi sebelum pengumpulan akhir lomba:
 
-1. **Visual Hero Desktop (`hero-desktop.png` / `hero-dekstop.png`) & Hero Mobile (`hero-mobile.png`)**:
-   - **Kondisi**: Merupakan visualisasi mahasiswi berhijab dengan VR headset dan laptop bertema *cyber-Islamic*. Berdasarkan gaya visual, gambar ini dihasilkan menggunakan bantuan generator AI (*AI-generated image*), yang kemudian dikomposisikan dengan tipografi dan grafis branding SiberMu.
-   - **Tindakan**: Konfirmasikan nama platform/model AI yang digunakan saat pembuatan (misalnya: Midjourney, Leonardo AI, DALL-E, atau Stable Diffusion) untuk dicantumkan pada form deklarasi orisinalitas aset/AI disclosure lomba.
+1. **Visual Hero (`hero-desktop.png`, `hero-dekstop.png`, `hero-mobile.png`, `hero-image.png`)**:
+   - **Kondisi**: Visual mahasiswi berhijab dengan VR headset & laptop bertema *cyber-Islamic* dibuat menggunakan **Freepik / Magnific AI image generation**, kemudian disesuaikan untuk kebutuhan landing page website SiberMu.
+   - **Tindakan**: Ketentuan penggunaan perlu diverifikasi berdasarkan paket/akun (Free vs Premium) dan *Terms of Use* yang berlaku saat aset dibuat. Pada lisensi Free, Freepik umumnya mewajibkan penyertaan atribusi/kredit, sedangkan pada lisensi Premium atribusi tidak diwajibkan.
 2. **Video Modal Embed (`components/HeroSection.tsx` baris 351)**:
    - **Kondisi**: URL embed saat ini masih mengarah ke `dQw4w9WgXcQ` (video placeholder/demo Rick Astley).
    - **Tindakan**: Ganti URL embed tersebut dengan tautan video profil resmi Universitas Siber Muhammadiyah dari kanal YouTube resmi SiberMu (`https://www.youtube.com/@universitassibermuhammadiyah`) sebelum karya dinilai oleh dewan juri.
 3. **Aset Legacy `hero-image.png`**:
    - **Kondisi**: Berada di folder `public/images/hero/`, namun tidak aktif dipanggil di kode komponen.
-   - **Tindakan**: Tidak mengganggu visual website, namun perlu dicatat sebagai aset cadangan/arsip.
+   - **Tindakan**: Tidak mengganggu visual website, namun perlu dicatat sebagai aset cadangan/arsip hasil generasi yang sama.
 
 ---
 
 ## ⚪ SUMBER TIDAK DITEMUKAN
 **NIL (Tidak Ada)**  
-Semua aset yang ada di dalam proyek berhasil dilacak dan diidentifikasi asal-usulnya, baik yang berasal dari identitas resmi kampus, library resmi, kode SVG mandiri, generator AI proyek, maupun dependensi framework.
+Semua aset yang ada di dalam proyek berhasil dilacak dan dikonfirmasi asal-usulnya, baik yang berasal dari identitas resmi kampus, library resmi, kode SVG mandiri, generator AI Freepik / Magnific, maupun dependensi framework.
 
 ---
 
 ## 🟠 PERLU ATTRIBUTION / IZIN
-1. **Identitas & Logo Resmi Universitas Siber Muhammadiyah**:
+1. **Atribusi Freepik / Magnific (Jika Menggunakan Akun Free)**:
+   - Jika pembuatan aset menggunakan akun Free di platform Freepik / Magnific, sertakan teks atribusi sesuai ketentuan lisensi Freepik. Jika menggunakan akun berbayar/Premium, atribusi tidak diwajibkan secara hukum platform, namun tetap disarankan dicantumkan dalam lembar *AI Tool Disclosure* lomba.
+2. **Identitas & Logo Resmi Universitas Siber Muhammadiyah**:
    - Memerlukan izin kelembagaan jika proyek diperlombakan atas nama pribadi di luar afiliasi resmi kampus. Namun jika proyek dibuat sebagai bagian dari representasi kampus / delegasi resmi SiberMu, penggunaannya adalah sah.
-2. **Deklarasi Penggunaan AI (AI Tool Disclosure)**:
-   - Kebanyakan lomba web design / software development modern mensyaratkan peserta untuk mendeklarasikan jika terdapat aset yang dibuat dengan bantuan Artificial Intelligence. Siapkan catatan atribusi AI generator (lihat bagian *Recommended Credits* di bawah).
 
 ---
 
 ## 🤖 AI-GENERATED ASSETS
-Daftar aset yang diidentifikasi sebagai karya visual berbasis AI (*AI-generated specifically for this project*):
+Daftar aset yang diidentifikasi sebagai karya visual berbasis AI:
 
-| File | Resolusi | Karakteristik Visual | Status Penggunaan |
-| :--- | :---: | :--- | :--- |
-| `public/images/hero/hero-desktop.png` | 1672 × 941 | Mahasiswi berhijab + VR headset + laptop, navy Islamic cyber composite | **Aktif** (Desktop Hero ≥ 1280px) |
-| `public/images/hero/hero-mobile.png` | 1131 × 1391 | Mahasiswi berhijab + VR headset + laptop, transparent cutout | **Aktif** (Mobile/Tablet Hero < 1280px) |
-| `public/images/hero/hero-image.png` | 1086 × 1086 | Mahasiswi berhijab + VR headset, square early asset | *Arsip / Tidak Aktif* |
+| File | Resolusi | Karakteristik Visual | Sumber AI | Status Penggunaan |
+| :--- | :---: | :--- | :--- | :--- |
+| `public/images/hero/hero-desktop.png` (dan `hero-dekstop.png`) | 1672 × 941 | Mahasiswi berhijab + VR headset + laptop, navy Islamic cyber composite | Freepik / Magnific AI image generation | **Aktif** (Desktop Hero ≥ 1280px) |
+| `public/images/hero/hero-mobile.png` | 1131 × 1391 | Mahasiswi berhijab + VR headset + laptop, transparent cutout | Freepik / Magnific AI image generation | **Aktif** (Mobile/Tablet Hero < 1280px) |
+| `public/images/hero/hero-image.png` | 1086 × 1086 | Mahasiswi berhijab + VR headset, square early asset | Freepik / Magnific AI image generation | *Arsip / Tidak Aktif* |
 
-*Catatan Legalitas AI*: Aset-aset di atas dibuat khusus untuk memvisualisasikan semangat mahasiswi digital berkemajuan di lingkungan kampus siber. Hak pakai mengikuti *Terms of Service* platform AI pembuatnya.
+*Catatan*: Aset-aset di atas dibuat menggunakan **Freepik / Magnific AI image generation** dan kemudian disesuaikan khusus untuk memvisualisasikan mahasiswi digital berkemajuan di lingkungan kampus siber SiberMu. Penggunaan aset AI tidak otomatis menjamin bebas hak cipta; kepatuhan hukum tetap bergantung pada ketentuan *Terms of Use* akun pembuat di Freepik/Magnific serta peraturan lomba yang diikuti.
 
 ---
 
@@ -98,7 +98,7 @@ Teks kredit berikut dapat langsung disalin ke dalam lembar orisinalitas atau lam
 1. Identitas & Logo:
    - Logo Resmi Universitas Siber Muhammadiyah (SiberMu) — Hak Cipta © Universitas Siber Muhammadiyah (https://sibermu.ac.id).
 2. Aset Visual & Ilustrasi:
-   - Visual Hero (Mahasiswi SiberMu & VR Cyber Concept): Dibuat secara khusus untuk proyek ini menggunakan bantuan AI Image Generation dan komposisi grafis digital mandiri.
+   - Visual Hero (Desktop & Mobile): AI-generated menggunakan Freepik / Magnific, kemudian disesuaikan untuk kebutuhan project landing page.
    - Elemen Vektor & Ornamen Islami (Kubah Masjid, Bintang Khatam 8 Sudut, Gelombang Abstrak): Dibuat secara orisinal dengan kode SVG inline di dalam komponen web.
 3. Tipografi:
    - Plus Jakarta Sans oleh Tokotype (Gumpita Rahayu) — SIL Open Font License 1.1.
