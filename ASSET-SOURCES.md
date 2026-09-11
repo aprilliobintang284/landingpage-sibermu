@@ -66,11 +66,6 @@ Aset-aset berikut membutuhkan verifikasi atau tindakan penyesuaian sebelum penye
 
 ---
 
-## ⚪ SUMBER TIDAK DITEMUKAN
-Seluruh aset yang teridentifikasi dalam project telah diaudit dan sumbernya telah dicatat. Beberapa aset, khususnya visual AI-generated, masih memerlukan verifikasi terhadap ketentuan penggunaan akun dan Terms of Use platform.
-
----
-
 ## 🟠 PERTIMBANGAN LISENSI & ATRIBUSI
 1. **Ketentuan Attribution Freepik / Magnific (Akun Free)**:
    - Karena aset hero dibuat menggunakan akun Free, periksa dan ikuti ketentuan attribution yang berlaku pada platform saat aset dibuat/digunakan.
