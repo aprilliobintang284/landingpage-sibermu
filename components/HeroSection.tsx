@@ -33,13 +33,13 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full bg-[#F6FAF8] pt-20 pb-8 sm:pt-24 sm:pb-12 lg:py-0 lg:h-screen lg:min-h-[760px] lg:max-h-[950px] flex items-center overflow-hidden"
+      className="relative w-full bg-[#F6FAF8] pt-20 pb-8 sm:pt-24 sm:pb-12 md:pt-28 md:pb-14 lg:pt-32 lg:pb-16 xl:py-0 xl:h-screen xl:min-h-[760px] xl:max-h-[950px] flex items-center overflow-hidden"
     >
       {/* ========================================================================= */}
-      {/* 1. DESKTOP ARTWORK LAYER (Screen width >= 1024px)                          */}
+      {/* 1. DESKTOP ARTWORK LAYER (Screen width >= 1280px)                          */}
       {/* Uses hero-dekstop.png exactly matching reference artwork composition     */}
       {/* ========================================================================= */}
-      <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[63%] xl:w-[61%] 2xl:w-[59%] pointer-events-none select-none z-0">
+      <div className="hidden xl:block absolute right-0 top-0 bottom-0 h-full w-[61%] 2xl:w-[59%] pointer-events-none select-none z-0">
         <div className="relative w-full h-full">
           <Image
             src="/images/hero/hero-dekstop.png"
@@ -47,7 +47,7 @@ export default function HeroSection() {
             fill
             priority
             className="object-cover object-right"
-            sizes="(min-width: 1024px) 65vw, 100vw"
+            sizes="(min-width: 1280px) 61vw, 100vw"
           />
 
           {/* Supporting Calligraphy: "Ilmu Teknologi Akhlak Berkemajuan" */}
@@ -135,13 +135,12 @@ export default function HeroSection() {
       {/* ========================================================================= */}
       {/* 2. MAIN CONTAINER (Mobile & Tablet Stacked, 2-Column on Desktop)           */}
       {/* ========================================================================= */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-1 sm:py-3 lg:py-0">
-        <div className="grid grid-cols-12 items-center gap-y-4 sm:gap-y-6 lg:gap-8 w-full">
-          {/* ===================================================================== */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-3 md:py-2 xl:py-0">
+        <div className="grid grid-cols-12 items-center gap-y-4 sm:gap-y-6 md:gap-y-6 xl:gap-8 w-full">
           {/* ===================================================================== */}
           {/* TEXT & CTAs: Top on Mobile/Tablet, Left on Desktop (50%)              */}
           {/* ===================================================================== */}
-          <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left max-w-2xl lg:max-w-lg z-20">
+          <div className="col-span-12 xl:col-span-6 flex flex-col items-start text-left max-w-2xl xl:max-w-lg z-20">
             {/* Eyebrow - Unified single element with tight leading */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -149,7 +148,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="mb-1.5 sm:mb-2.5"
             >
-              <span className="block font-heading font-bold text-[11px] min-[360px]:text-[12px] sm:text-xs lg:text-sm tracking-[0.16em] sm:tracking-[0.18em] text-[#0F9F91] uppercase leading-tight">
+              <span className="block font-heading font-bold text-[11px] min-[360px]:text-[12px] sm:text-xs md:text-sm tracking-[0.16em] sm:tracking-[0.18em] text-[#0F9F91] uppercase leading-tight">
                 UNIVERSITAS SIBER<br className="min-[480px]:hidden" /> MUHAMMADIYAH
               </span>
             </motion.div>
@@ -159,7 +158,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.08, ease: "easeOut" }}
-              className="font-heading font-extrabold text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-[44px] md:text-[48px] lg:text-[48px] xl:text-[56px] leading-[1.12] tracking-tight"
+              className="font-heading font-extrabold text-[30px] min-[360px]:text-[34px] min-[400px]:text-[38px] sm:text-[44px] md:text-[48px] lg:text-[52px] xl:text-[56px] leading-[1.12] tracking-tight"
             >
               <span className="block text-[#0A192F]">
                 Kembangkan Potensi,
@@ -174,7 +173,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.16, ease: "easeOut" }}
-              className="text-slate-600 text-[13.5px] min-[360px]:text-[14.5px] sm:text-base leading-relaxed mt-2 sm:mt-3 max-w-[340px] sm:max-w-md lg:max-w-[460px] font-normal"
+              className="text-slate-600 text-[13.5px] min-[360px]:text-[14.5px] sm:text-base md:text-[16.5px] leading-relaxed mt-2 sm:mt-3 md:mt-4 max-w-[340px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-[460px] font-normal"
             >
               Biro Kemahasiswaan dan AIK Universitas Siber Muhammadiyah hadir
               untuk mendampingi perjalanan prestasimu yang berlandaskan
@@ -217,14 +216,14 @@ export default function HeroSection() {
               </button>
             </motion.div>
 
-            {/* Desktop Scroll Indicator (Hidden on mobile) */}
+            {/* Desktop Scroll Indicator (Hidden on mobile & tablet) */}
             <motion.button
               type="button"
               onClick={scrollToNextSection}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="hidden lg:flex items-center gap-3.5 mt-12 xl:mt-16 text-left group cursor-pointer focus:outline-none"
+              className="hidden xl:flex items-center gap-3.5 mt-12 xl:mt-16 text-left group cursor-pointer focus:outline-none"
             >
               <div className="flex flex-col items-center">
                 <div className="w-5 h-8 rounded-full border-2 border-slate-400 flex items-start justify-center p-1">
@@ -247,13 +246,13 @@ export default function HeroSection() {
           </div>
 
           {/* ===================================================================== */}
-          {/* MOBILE/TABLET VISUAL HERO AREA (< 1024px)                             */}
-          {/* Asymmetric composition matching screenshot reference                  */}
+          {/* MOBILE/TABLET VISUAL HERO AREA (< 1280px)                             */}
+          {/* Asymmetric composition matching mobile & tablet transition            */}
           {/* Uses transparent /hero/hero-mobile.png directly on light canvas       */}
           {/* ===================================================================== */}
-          <div className="col-span-12 lg:hidden relative w-full flex flex-col items-end -mt-[145px] min-[360px]:-mt-[170px] sm:-mt-[150px] z-10 select-none">
-            {/* Visual Wrapper: Aligned right, laptop shifted inward from left */}
-            <div className="relative w-[94%] min-[360px]:w-[91%] sm:w-[84%] max-w-[420px] mr-[-16px] min-[360px]:mr-[-22px] sm:mr-0">
+          <div className="col-span-12 xl:hidden relative w-full flex flex-col items-end -mt-[145px] min-[360px]:-mt-[170px] sm:-mt-[150px] md:-mt-[160px] lg:-mt-[180px] z-10 select-none">
+            {/* Visual Wrapper: Aligned right, scaled for tablet */}
+            <div className="relative w-[94%] min-[360px]:w-[91%] sm:w-[84%] md:w-[72%] lg:w-[62%] max-w-[420px] md:max-w-[540px] lg:max-w-[620px] mr-[-16px] min-[360px]:mr-[-22px] sm:mr-0">
               {/* Transparent PNG Hero Mobile Asset */}
               <Image
                 src="/hero/hero-mobile.png"
@@ -262,23 +261,23 @@ export default function HeroSection() {
                 height={1391}
                 priority
                 className="w-full h-auto object-contain pointer-events-none drop-shadow-sm"
-                sizes="(max-width: 640px) 95vw, 420px"
+                sizes="(max-width: 640px) 95vw, (max-width: 1024px) 75vw, 620px"
               />
 
               {/* Supporting Calligraphy Script on top-right navy curve: "Ilmu • Teknologi • Akhlak • Berkemajuan" */}
               <div
                 className={`absolute top-[17%] right-[7%] min-[360px]:right-[9%] text-right leading-[1.18] pointer-events-none select-none ${caveat.className}`}
               >
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-white/95 font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Ilmu
                 </span>
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-white/95 font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Teknologi
                 </span>
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-[#2DD4BF] font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg md:text-xl lg:text-2xl text-[#2DD4BF] font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Akhlak
                 </span>
-                <span className="block text-sm min-[360px]:text-base sm:text-lg text-[#2DD4BF] font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+                <span className="block text-sm min-[360px]:text-base sm:text-lg md:text-xl lg:text-2xl text-[#2DD4BF] font-bold tracking-wide -rotate-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                   Berkemajuan
                 </span>
               </div>
@@ -289,22 +288,22 @@ export default function HeroSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="absolute bottom-7 left-3 right-5 min-[360px]:bottom-9 min-[360px]:left-4 min-[360px]:right-6 sm:bottom-10 z-20 pointer-events-auto"
+                className="absolute bottom-7 left-3 right-5 min-[360px]:bottom-9 min-[360px]:left-4 min-[360px]:right-6 sm:bottom-10 md:bottom-12 md:left-6 md:right-auto md:max-w-[320px] lg:bottom-14 lg:left-8 lg:max-w-[340px] z-20 pointer-events-auto"
               >
-                <div className="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 min-[360px]:p-3 sm:p-3.5 shadow-[0_12px_32px_-6px_rgba(10,25,47,0.16)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3">
-                  <div className="flex-shrink-0 w-9 h-9 min-[360px]:w-10 min-[360px]:h-10 rounded-xl bg-[#E6F8F5] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
-                    <GraduationCap className="w-5 h-5 stroke-[1.8]" />
+                <div className="bg-white/95 backdrop-blur-md rounded-2xl p-2.5 min-[360px]:p-3 sm:p-3.5 md:p-4 shadow-[0_12px_32px_-6px_rgba(10,25,47,0.16)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3 md:gap-3.5">
+                  <div className="flex-shrink-0 w-9 h-9 min-[360px]:w-10 min-[360px]:h-10 md:w-11 md:h-11 rounded-xl bg-[#E6F8F5] border border-[#14B8A6]/25 flex items-center justify-center text-[#0F9F91]">
+                    <GraduationCap className="w-5 h-5 md:w-6 md:h-6 stroke-[1.8]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-heading font-extrabold text-xs min-[360px]:text-[13.5px] text-[#0A192F] tracking-tight leading-tight truncate">
+                    <h4 className="font-heading font-extrabold text-xs min-[360px]:text-[13.5px] md:text-sm text-[#0A192F] tracking-tight leading-tight truncate">
                       Mahasiswa Berkemajuan
                     </h4>
-                    <p className="text-[9.5px] min-[360px]:text-[10.5px] text-slate-500 font-medium leading-tight truncate mt-0.5">
+                    <p className="text-[9.5px] min-[360px]:text-[10.5px] md:text-xs text-slate-500 font-medium leading-tight truncate mt-0.5">
                       Berilmu, Berakhlak, Berdampak untuk Umat.
                     </p>
                   </div>
                   <div className="flex-shrink-0 text-slate-400 pr-0.5">
-                    <ChevronRight className="w-4 h-4 stroke-[2]" />
+                    <ChevronRight className="w-4 h-4 md:w-5 md:h-5 stroke-[2]" />
                   </div>
                 </div>
               </motion.div>
