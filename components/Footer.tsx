@@ -258,9 +258,44 @@ export default function Footer() {
         </div>
 
         {/* ================================================================= */}
+        {/* KREDIT & SUMBER ASET                                              */}
+        {/* ================================================================= */}
+        <div className="border-t border-white/[0.08] mt-8 sm:mt-12 pt-5 pb-1">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 sm:gap-3 text-xs text-slate-400">
+            <div className="flex flex-wrap items-center gap-x-2.5 sm:gap-x-3 gap-y-1.5">
+              <span className="font-semibold text-slate-300 text-xs">
+                Kredit &amp; Sumber Aset:
+              </span>
+              <span className="text-slate-400 text-xs">
+                Hero: <span className="text-slate-300">AI-generated menggunakan Freepik / Magnific</span>
+              </span>
+              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="text-slate-400 text-xs">
+                Ikon: <span className="text-slate-300">Lucide Icons</span>
+              </span>
+              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="text-slate-400 text-xs">
+                Font: <span className="text-slate-300">Google Fonts</span>
+              </span>
+              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="text-slate-400 text-xs">
+                Video: <span className="text-slate-300">YouTube – SiberMu</span>
+              </span>
+            </div>
+
+            <div className="text-[11px] text-slate-500 flex-shrink-0 flex items-center gap-1.5">
+              <span>Lihat detail sumber aset →</span>
+              <span className="text-slate-400 font-mono text-[10px] bg-white/[0.04] px-1.5 py-0.5 rounded border border-white/[0.08]">
+                ASSET-SOURCES.md
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* ================================================================= */}
         {/* FOOTER BOTTOM: DIVIDER & COPYRIGHT                                */}
         {/* ================================================================= */}
-        <div className="border-t border-white/[0.08] mt-8 sm:mt-14 pt-6 flex flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-slate-500">
+        <div className="border-t border-white/[0.06] mt-4 pt-4 sm:pt-5 flex flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-slate-500">
           <p className="text-left leading-relaxed">
             © 2026 SiberMu — Universitas Siber Muhammadiyah. <span className="hidden min-[480px]:inline">Seluruh hak cipta dilindungi.</span>
           </p>
