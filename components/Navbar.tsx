@@ -21,6 +21,7 @@ const navItems: NavItem[] = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,16 +30,30 @@ export default function Navbar() {
       } else {
         setIsScrolled(false);
       }
+
+      // Track active section for mobile menu indicator
+      const sections = ["hero", "kemahasiswaan", "aik", "cta"];
+      const scrollPos = window.scrollY + 120;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el && scrollPos >= el.offsetTop) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        mobileMenuOpen
+          ? "bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-sm shadow-slate-900/5 py-2.5 sm:py-3"
+          : isScrolled
           ? "bg-[#070f1e]/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 py-2.5 sm:py-3"
           : "bg-white/80 backdrop-blur-md border-b border-slate-200/50 py-2.5 sm:py-4"
       }`}
@@ -67,14 +82,14 @@ export default function Navbar() {
             <div className="flex flex-col">
               <span
                 className={`font-heading font-extrabold text-[17px] sm:text-[19px] tracking-tight transition-colors duration-300 ${
-                  isScrolled ? "text-white" : "text-[#0A192F]"
+                  isScrolled && !mobileMenuOpen ? "text-white" : "text-[#0A192F]"
                 }`}
               >
                 SiberMu
               </span>
               <span
                 className={`text-[10.5px] sm:text-xs font-medium transition-colors duration-300 ${
-                  isScrolled ? "text-slate-400" : "text-slate-600"
+                  isScrolled && !mobileMenuOpen ? "text-slate-400" : "text-slate-600"
                 }`}
               >
                 Biro Kemahasiswaan & AIK
@@ -124,7 +139,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
               className={`p-1.5 sm:p-2 rounded-xl transition-all duration-200 focus:outline-none ${
-                isScrolled
+                isScrolled && !mobileMenuOpen
                   ? "text-slate-200 hover:text-white"
                   : "text-[#0A192F] hover:text-[#14B8A6]"
               }`}
@@ -142,39 +157,59 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 px-4 pt-2 pb-5">
-          <div className="rounded-2xl bg-[#070f1e]/98 border border-white/10 backdrop-blur-2xl p-4 shadow-2xl space-y-3">
-            <div className="flex flex-col space-y-1">
-              {navItems.map((item) => (
+        <>
+          {/* Subtle backdrop overlay for contrast against page content */}
+          <div
+            onClick={() => setMobileMenuOpen(false)}
+            className="fixed inset-0 top-[57px] sm:top-[65px] bg-slate-900/25 backdrop-blur-[2px] z-[-1] md:hidden"
+            aria-hidden="true"
+          />
+
+          <div className="md:hidden mt-2 px-4 pt-1 pb-5">
+            <div className="rounded-2xl bg-white/98 border border-slate-200/90 backdrop-blur-xl p-4 shadow-[0_16px_36px_-6px_rgba(10,25,47,0.14)] space-y-3">
+              <div className="flex flex-col space-y-1">
+                {navItems.map((item) => {
+                  const isActive = activeSection === item.href.slice(1);
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={(e) => {
+                        setActiveSection(item.href.slice(1));
+                        setMobileMenuOpen(false);
+                        scrollToId(item.href, e);
+                      }}
+                      className={`px-4 py-2.5 rounded-xl text-sm transition-all duration-200 flex items-center justify-between ${
+                        isActive
+                          ? "bg-[#E6F8F5] text-[#0F9F91] font-semibold border border-[#14B8A6]/20"
+                          : "text-[#0A192F] hover:text-[#0F9F91] hover:bg-[#F0FBF9] font-medium"
+                      }`}
+                    >
+                      <span>{item.name}</span>
+                      {isActive && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]" />
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              <div className="pt-2.5 border-t border-slate-100">
                 <Link
-                  key={item.name}
-                  href={item.href}
+                  href="#cta"
                   onClick={(e) => {
                     setMobileMenuOpen(false);
-                    scrollToId(item.href, e);
+                    scrollToId("cta", e);
                   }}
-                  className="px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:text-[#2DD4BF] hover:bg-white/5 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full h-11 px-4 text-sm font-semibold text-white bg-[#14B8A6] hover:bg-[#0F9F91] rounded-[13px] transition-colors shadow-md shadow-[#14B8A6]/20"
                 >
-                  {item.name}
+                  <span>Portal Layanan Mahasiswa</span>
+                  <ArrowUpRight className="w-4 h-4 stroke-[2.2]" />
                 </Link>
-              ))}
-            </div>
-
-            <div className="pt-2 border-t border-white/10">
-              <Link
-                href="#cta"
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  scrollToId("cta", e);
-                }}
-                className="flex items-center justify-center gap-2 w-full h-11 px-4 text-sm font-semibold text-white bg-[#14B8A6] hover:bg-[#0F9F91] rounded-[13px] transition-colors shadow-md shadow-[#14B8A6]/20"
-              >
-                <span>Portal Layanan Mahasiswa</span>
-                <ArrowUpRight className="w-4 h-4 stroke-[2.2]" />
-              </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
